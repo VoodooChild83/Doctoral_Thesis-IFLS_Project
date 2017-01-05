@@ -3,8 +3,16 @@
 
 ##################### Import Modules and math functions ######################
 
-cimport cython
-from libc.stdlib cimport  rand, RAND_MAX, calloc, realloc, free
+#Global Cython Compiler Directives:
+
+#!python
+#cython: boundscheck=False
+#cython: wraparound=False
+#cython: nonecheck=False
+#cython: cdivision=True
+
+#Modules
+from libc.stdlib cimport  rand, RAND_MAX, calloc, free, abort
 from libc.math cimport exp, log, HUGE_VAL
 
 #Define euler's constant
@@ -12,20 +20,19 @@ cdef double eg = 0.5772156649015328606065
 
 ############################# Define Globals #################################
 
-cdef size_t tot_states, tot_decisions, iteration
+cdef Py_ssize_t tot_states, tot_decisions, iteration
 
 ########################### Define functions to use ##########################
 
 #This function will generate random integers between 1 and 4 (inclusive) to 
 #give initial generation their states
-@cython.cdivision(True)
+
 cdef inline double rand_val() nogil:
     #generate a random number between 0 and 1
     return rand()/<double>RAND_MAX
 
 #The infimum norm for test of convergence, releasing the gil of the function
-@cython.boundscheck(False)
-@cython.wraparound(False)
+
 cdef double infnorm( double *arr ) nogil:
     cdef:
         double temp, norm=(-1)*HUGE_VAL
@@ -34,8 +41,7 @@ cdef double infnorm( double *arr ) nogil:
         #manually allocate the memory of the array to avoid calls to the cpython api
         double* diff = <double*>calloc(tot_states, sizeof(double))
     
-    with gil:
-        if not diff: raise MemoryError()
+    if not diff: abort()
         
     try:  
         #calculate the absolute value of the differences between the two vectors
@@ -53,8 +59,7 @@ cdef double infnorm( double *arr ) nogil:
         free(diff)
 
 #Define the inner-array product, releasing the gil of the function
-@cython.boundscheck(False)
-@cython.wraparound(False)
+
 cdef double dot( double[:] a, double *b ) nogil:
     cdef:
         double result=0
@@ -64,10 +69,7 @@ cdef double dot( double[:] a, double *b ) nogil:
     return result
 
 #The model:
-@cython.boundscheck(False)
-@cython.wraparound(False)
-@cython.cdivision(True)
-@cython.nonecheck(False)
+
 cpdef void Modelo(double[:] param, double[:,:,:] wages, double[:,:,:] c_wages, 
                   double[:,:] mover, double[:,:,:] tranny, double[:,:] CCP, double[:] V) nogil: 
              
@@ -99,9 +101,8 @@ cpdef void Modelo(double[:] param, double[:,:,:] wages, double[:,:,:] c_wages,
     v=<double*> calloc(tot_states*tot_decisions, sizeof(double))
     sums=<double*> calloc(tot_states, sizeof(double)) 
 
-    with gil:
-        #check memory was allocated:
-        if not (V_model or v or sums): raise MemoryError()
+    #check memory was allocated:
+    if not (V_model or v or sums): abort()
 
     #run the model solution
     try:
@@ -132,7 +133,7 @@ cpdef void Modelo(double[:] param, double[:,:,:] wages, double[:,:,:] c_wages,
                 V_model[k + tot_states] = eg + log(total)
                 
             #check for convergence
-            check = infnorm( V_model )
+            check = infnorm(V_model)
             
             #convergence:
             if check < tol:
