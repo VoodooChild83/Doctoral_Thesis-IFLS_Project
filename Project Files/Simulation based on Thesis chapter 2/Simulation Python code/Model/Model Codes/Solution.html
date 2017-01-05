@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cython: _cython_magic_c98830bf69d441b1320639a5162dfa16.pyx</title>
+    <title>Cython: _cython_magic_bf666d5fc10c153e729a3d3f77ca302f.pyx</title>
     <style type="text/css">
     
 body.cython { font-family: courier; font-size: 12; }
@@ -366,7 +366,7 @@ body.cython { font-family: courier; font-size: 12; }
     <span style="background-color: #FFFF00">Yellow lines</span> hint at Python interaction.<br />
     Click on a line that starts with a "<code>+</code>" to see the C code that Cython generated for it.
 </p>
-<p>Raw output: <a href="_cython_magic_c98830bf69d441b1320639a5162dfa16.c">_cython_magic_c98830bf69d441b1320639a5162dfa16.c</a></p>
+<p>Raw output: <a href="_cython_magic_bf666d5fc10c153e729a3d3f77ca302f.c">_cython_magic_bf666d5fc10c153e729a3d3f77ca302f.c</a></p>
 <div class="cython"><pre class="cython line score-0">&#xA0;<span class="">001</span>: </pre>
 <pre class="cython line score-11" onclick='toggleDiv(this)'>+<span class="">002</span>: <span class="c"># Cython code to optimise in C the solution of the model portion of the code</span></pre>
 <pre class='cython code score-11 '>  __pyx_t_1 = <span class='py_c_api'>PyDict_New</span>(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 2, __pyx_L1_error)
@@ -390,7 +390,7 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">017</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">018</span>: <span class="c">#Define euler&#39;s constant</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">019</span>: <span class="k">cdef</span> <span class="kt">double</span> <span class="nf">eg</span> <span class="o">=</span> <span class="mf">0.5772156649015328606065</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_eg = 0.5772156649015328606065;
+<pre class='cython code score-0 '>  __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_eg = 0.5772156649015328606065;
 </pre><pre class="cython line score-0">&#xA0;<span class="">020</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">021</span>: <span class="c">############################# Define Globals #################################</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">022</span>: </pre>
@@ -402,7 +402,7 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">028</span>: <span class="c">#give initial generation their states</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">029</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">030</span>: <span class="k">cdef</span> <span class="kr">inline</span> <span class="kt">double</span> <span class="nf">rand_val</span><span class="p">()</span> <span class="k">nogil</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>static CYTHON_INLINE double __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_rand_val(void) {
+<pre class='cython code score-0 '>static CYTHON_INLINE double __pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_rand_val(void) {
   double __pyx_r;
 /* … */
   /* function exit code */
@@ -417,7 +417,7 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">034</span>: <span class="c">#The infimum norm for test of convergence, releasing the gil of the function</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">035</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">036</span>: <span class="k">cdef</span> <span class="kt">double</span> <span class="nf">infnorm</span><span class="p">(</span> <span class="n">double</span> <span class="o">*</span><span class="n">arr</span> <span class="p">)</span> <span class="k">nogil</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>static double __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_infnorm(double *__pyx_v_arr) {
+<pre class='cython code score-0 '>static double __pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_infnorm(double *__pyx_v_arr) {
   double __pyx_v_temp;
   double __pyx_v_norm;
   Py_ssize_t __pyx_v_j;
@@ -435,7 +435,7 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">040</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">041</span>:         <span class="c">#manually allocate the memory of the array to avoid calls to the cpython api</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">042</span>:         <span class="n">double</span><span class="o">*</span> <span class="n">diff</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">double</span><span class="o">*&gt;</span><span class="n">calloc</span><span class="p">(</span><span class="n">tot_states</span><span class="p">,</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_diff = ((double *)calloc(__pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states, (sizeof(double))));
+<pre class='cython code score-0 '>  __pyx_v_diff = ((double *)calloc(__pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states, (sizeof(double))));
 </pre><pre class="cython line score-0">&#xA0;<span class="">043</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">044</span>:     <span class="k">if</span> <span class="ow">not</span> <span class="n">diff</span><span class="p">:</span> <span class="n">abort</span><span class="p">()</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_1 = ((!(__pyx_v_diff != 0)) != 0);
@@ -447,11 +447,11 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class='cython code score-0 '>  /*try:*/ {
 </pre><pre class="cython line score-0">&#xA0;<span class="">047</span>:         <span class="c">#calculate the absolute value of the differences between the two vectors</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">048</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span></pre>
-<pre class='cython code score-0 '>    __pyx_t_2 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states;
+<pre class='cython code score-0 '>    __pyx_t_2 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states;
     for (__pyx_t_3 = 0; __pyx_t_3 &lt; __pyx_t_2; __pyx_t_3+=1) {
       __pyx_v_j = __pyx_t_3;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">049</span>:             <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="n">tot_states</span><span class="p">]</span> <span class="o">-</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span></pre>
-<pre class='cython code score-0 '>      __pyx_v_temp = ((__pyx_v_arr[(__pyx_v_j + __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states)]) - (__pyx_v_arr[__pyx_v_j]));
+<pre class='cython code score-0 '>      __pyx_v_temp = ((__pyx_v_arr[(__pyx_v_j + __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states)]) - (__pyx_v_arr[__pyx_v_j]));
 </pre><pre class="cython line score-0">&#xA0;<span class="">050</span>:             <span class="c">#manual absolute value to prevent using abs function (a cpython api call)</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">051</span>:             <span class="k">if</span> <span class="n">temp</span><span class="o">&lt;</span><span class="mf">0</span><span class="p">:</span></pre>
 <pre class='cython code score-0 '>      __pyx_t_1 = ((__pyx_v_temp &lt; 0.0) != 0);
@@ -464,7 +464,7 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class='cython code score-0 '>      (__pyx_v_diff[__pyx_v_j]) = __pyx_v_temp;
     }
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">054</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span></pre>
-<pre class='cython code score-0 '>    __pyx_t_2 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states;
+<pre class='cython code score-0 '>    __pyx_t_2 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states;
     for (__pyx_t_3 = 0; __pyx_t_3 &lt; __pyx_t_2; __pyx_t_3+=1) {
       __pyx_v_j = __pyx_t_3;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">055</span>:             <span class="k">if</span> <span class="n">diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;</span><span class="n">norm</span><span class="p">:</span> <span class="n">norm</span><span class="o">=</span><span class="n">diff</span><span class="p">[</span><span class="n">j</span><span class="p">]</span></pre>
@@ -490,7 +490,7 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">061</span>: <span class="c">#Define the inner-array product, releasing the gil of the function</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">062</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">063</span>: <span class="k">cdef</span> <span class="kt">double</span> <span class="nf">dot</span><span class="p">(</span> <span class="n">double</span><span class="p">[:]</span> <span class="n">a</span><span class="p">,</span> <span class="n">double</span> <span class="o">*</span><span class="n">b</span> <span class="p">)</span> <span class="k">nogil</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>static double __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_dot(__Pyx_memviewslice __pyx_v_a, double *__pyx_v_b) {
+<pre class='cython code score-0 '>static double __pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_dot(__Pyx_memviewslice __pyx_v_a, double *__pyx_v_b) {
   double __pyx_v_result;
   Py_ssize_t __pyx_v_i;
   Py_ssize_t __pyx_v_dim;
@@ -520,8 +520,8 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">071</span>: <span class="c">#The model:</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">072</span>: </pre>
 <pre class="cython line score-109" onclick='toggleDiv(this)'>+<span class="">073</span>: <span class="k">cpdef</span> <span class="kt">void</span> <span class="nf">Modelo</span><span class="p">(</span><span class="n">double</span><span class="p">[:]</span> <span class="n">param</span><span class="p">,</span> <span class="n">double</span><span class="p">[:,:,:]</span> <span class="n">wages</span><span class="p">,</span> <span class="n">double</span><span class="p">[:,:,:]</span> <span class="n">c_wages</span><span class="p">,</span></pre>
-<pre class='cython code score-109 '>static PyObject *__pyx_pw_46_cython_magic_c98830bf69d441b1320639a5162dfa16_1Modelo(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Modelo(__Pyx_memviewslice __pyx_v_param, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_c_wages, __Pyx_memviewslice __pyx_v_mover, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_CCP, __Pyx_memviewslice __pyx_v_V, CYTHON_UNUSED int __pyx_skip_dispatch) {
+<pre class='cython code score-109 '>static PyObject *__pyx_pw_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_1Modelo(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static void __pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_Modelo(__Pyx_memviewslice __pyx_v_param, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_c_wages, __Pyx_memviewslice __pyx_v_mover, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_CCP, __Pyx_memviewslice __pyx_v_V, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double __pyx_v_alpha;
   double __pyx_v_tol;
   double __pyx_v_v_temp;
@@ -538,13 +538,13 @@ static void __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Modelo(__Py
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XDEC_MEMVIEW(&amp;__pyx_t_20, 0);
-  <span class='pyx_c_api'>__Pyx_WriteUnraisable</span>("_cython_magic_c98830bf69d441b1320639a5162dfa16.Modelo", __pyx_clineno, __pyx_lineno, __pyx_filename, 0, 1);
+  <span class='pyx_c_api'>__Pyx_WriteUnraisable</span>("_cython_magic_bf666d5fc10c153e729a3d3f77ca302f.Modelo", __pyx_clineno, __pyx_lineno, __pyx_filename, 0, 1);
   __pyx_L0:;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_46_cython_magic_c98830bf69d441b1320639a5162dfa16_1Modelo(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_46_cython_magic_c98830bf69d441b1320639a5162dfa16_1Modelo(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_1Modelo(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_1Modelo(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_param = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_wages = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_c_wages = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -634,18 +634,18 @@ static PyObject *__pyx_pw_46_cython_magic_c98830bf69d441b1320639a5162dfa16_1Mode
   __pyx_L5_argtuple_error:;
   <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("Modelo", 1, 7, 7, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); __PYX_ERR(0, 73, __pyx_L3_error)
   __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("_cython_magic_c98830bf69d441b1320639a5162dfa16.Modelo", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("_cython_magic_bf666d5fc10c153e729a3d3f77ca302f.Modelo", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Modelo(__pyx_self, __pyx_v_param, __pyx_v_wages, __pyx_v_c_wages, __pyx_v_mover, __pyx_v_tranny, __pyx_v_CCP, __pyx_v_V);
+  __pyx_r = __pyx_pf_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_Modelo(__pyx_self, __pyx_v_param, __pyx_v_wages, __pyx_v_c_wages, __pyx_v_mover, __pyx_v_tranny, __pyx_v_CCP, __pyx_v_V);
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Modelo(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_param, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_c_wages, __Pyx_memviewslice __pyx_v_mover, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_CCP, __Pyx_memviewslice __pyx_v_V) {
+static PyObject *__pyx_pf_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_Modelo(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_param, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_c_wages, __Pyx_memviewslice __pyx_v_mover, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_CCP, __Pyx_memviewslice __pyx_v_V) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("Modelo", 0);
@@ -657,7 +657,7 @@ static PyObject *__pyx_pf_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Model
   if (unlikely(!__pyx_v_tranny.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("tranny"); __PYX_ERR(0, 73, __pyx_L1_error) }
   if (unlikely(!__pyx_v_CCP.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("CCP"); __PYX_ERR(0, 73, __pyx_L1_error) }
   if (unlikely(!__pyx_v_V.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("V"); __PYX_ERR(0, 73, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Modelo(__pyx_v_param, __pyx_v_wages, __pyx_v_c_wages, __pyx_v_mover, __pyx_v_tranny, __pyx_v_CCP, __pyx_v_V, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_Modelo(__pyx_v_param, __pyx_v_wages, __pyx_v_c_wages, __pyx_v_mover, __pyx_v_tranny, __pyx_v_CCP, __pyx_v_V, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -666,7 +666,7 @@ static PyObject *__pyx_pf_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Model
   /* function exit code */
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("_cython_magic_c98830bf69d441b1320639a5162dfa16.Modelo", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("_cython_magic_bf666d5fc10c153e729a3d3f77ca302f.Modelo", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&amp;__pyx_v_param, 1);
@@ -687,11 +687,11 @@ static PyObject *__pyx_pf_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Model
 <pre class="cython line score-0">&#xA0;<span class="">078</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">079</span>:     <span class="n">iteration</span><span class="o">=&lt;</span><span class="n">size_t</span><span class="o">&gt;</span><span class="n">param</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_1 = 2;
-  __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_iteration = ((size_t)(*((double *) ( /* dim=0 */ (__pyx_v_param.data + __pyx_t_1 * __pyx_v_param.strides[0]) ))));
+  __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_iteration = ((size_t)(*((double *) ( /* dim=0 */ (__pyx_v_param.data + __pyx_t_1 * __pyx_v_param.strides[0]) ))));
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">080</span>:     <span class="n">tot_states</span><span class="o">=</span><span class="n">tranny</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states = (__pyx_v_tranny.shape[0]);
+<pre class='cython code score-0 '>  __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states = (__pyx_v_tranny.shape[0]);
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">081</span>:     <span class="n">tot_decisions</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_decisions = (__pyx_v_V.shape[0]);
+<pre class='cython code score-0 '>  __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_decisions = (__pyx_v_V.shape[0]);
 </pre><pre class="cython line score-0">&#xA0;<span class="">082</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">083</span>:     <span class="c">#declare variables and arrays</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">084</span>:     <span class="k">cdef</span><span class="p">:</span></pre>
@@ -718,11 +718,11 @@ static PyObject *__pyx_pf_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Model
 <pre class="cython line score-0">&#xA0;<span class="">098</span>:         <span class="n">double</span> <span class="o">*</span><span class="n">sums</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">099</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">100</span>:     <span class="n">V_model</span><span class="o">=&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">calloc</span><span class="p">(</span><span class="n">tot_states</span><span class="o">*</span><span class="mf">2</span><span class="p">,</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_V_model = ((double *)calloc((__pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states * 2), (sizeof(double))));
+<pre class='cython code score-0 '>  __pyx_v_V_model = ((double *)calloc((__pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states * 2), (sizeof(double))));
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">101</span>:     <span class="n">v</span><span class="o">=&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">calloc</span><span class="p">(</span><span class="n">tot_states</span><span class="o">*</span><span class="n">tot_decisions</span><span class="p">,</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_v = ((double *)calloc((__pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states * __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_decisions), (sizeof(double))));
+<pre class='cython code score-0 '>  __pyx_v_v = ((double *)calloc((__pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states * __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_decisions), (sizeof(double))));
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">102</span>:     <span class="n">sums</span><span class="o">=&lt;</span><span class="n">double</span><span class="o">*&gt;</span> <span class="n">calloc</span><span class="p">(</span><span class="n">tot_states</span><span class="p">,</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_sums = ((double *)calloc(__pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states, (sizeof(double))));
+<pre class='cython code score-0 '>  __pyx_v_sums = ((double *)calloc(__pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states, (sizeof(double))));
 </pre><pre class="cython line score-0">&#xA0;<span class="">103</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">104</span>:     <span class="c">#check memory was allocated:</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">105</span>:     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">V_model</span> <span class="ow">or</span> <span class="n">v</span> <span class="ow">or</span> <span class="n">sums</span><span class="p">):</span> <span class="n">abort</span><span class="p">()</span></pre>
@@ -751,29 +751,29 @@ static PyObject *__pyx_pf_46_cython_magic_c98830bf69d441b1320639a5162dfa16_Model
 <pre class='cython code score-0 '>  /*try:*/ {
 </pre><pre class="cython line score-0">&#xA0;<span class="">109</span>:         <span class="c">#initial guess</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">110</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span></pre>
-<pre class='cython code score-0 '>    __pyx_t_6 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states;
+<pre class='cython code score-0 '>    __pyx_t_6 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states;
     for (__pyx_t_7 = 0; __pyx_t_7 &lt; __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">111</span>:             <span class="n">V_model</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">rand_val</span><span class="p">()</span></pre>
-<pre class='cython code score-0 '>      (__pyx_v_V_model[__pyx_v_j]) = __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_rand_val();
+<pre class='cython code score-0 '>      (__pyx_v_V_model[__pyx_v_j]) = __pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_rand_val();
     }
 </pre><pre class="cython line score-0">&#xA0;<span class="">112</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">113</span>:         <span class="c">#run the model loop</span></pre>
-<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">114</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="n">iteration</span><span class="p">):</span></pre>
-<pre class='cython code score-0 '>    __pyx_t_6 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_iteration;
+<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">114</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="n">iteration</span><span class="p">):</span></pre>
+<pre class='cython code score-0 '>    __pyx_t_6 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_iteration;
     for (__pyx_t_7 = 1; __pyx_t_7 &lt; __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
 </pre><pre class="cython line score-0">&#xA0;<span class="">115</span>: </pre>
-<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">116</span>:             <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span>            <span class="c"># iterate over the states (the third dimension)</span></pre>
-<pre class='cython code score-0 '>      __pyx_t_8 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states;
+<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">116</span>:             <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span>            <span class="c"># iterate over the states (the third dimension)</span></pre>
+<pre class='cython code score-0 '>      __pyx_t_8 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states;
       for (__pyx_t_9 = 0; __pyx_t_9 &lt; __pyx_t_8; __pyx_t_9+=1) {
         __pyx_v_k = __pyx_t_9;
 </pre><pre class="cython line score-0">&#xA0;<span class="">117</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">118</span>:                 <span class="n">total</span><span class="o">=</span><span class="mf">0</span></pre>
 <pre class='cython code score-0 '>        __pyx_v_total = 0.0;
 </pre><pre class="cython line score-0">&#xA0;<span class="">119</span>: </pre>
-<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">120</span>:                 <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">tot_decisions</span><span class="p">):</span>     <span class="c"># iterate over each decision to fill in the v matrix</span></pre>
-<pre class='cython code score-0 '>        __pyx_t_10 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_decisions;
+<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">120</span>:                 <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_decisions</span><span class="p">):</span>     <span class="c"># iterate over each decision to fill in the v matrix</span></pre>
+<pre class='cython code score-0 '>        __pyx_t_10 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_decisions;
         for (__pyx_t_11 = 0; __pyx_t_11 &lt; __pyx_t_10; __pyx_t_11+=1) {
           __pyx_v_l = __pyx_t_11;
 </pre><pre class="cython line score-0">&#xA0;<span class="">121</span>: </pre>
@@ -831,13 +831,13 @@ __pyx_t_20.shape[0] = __pyx_v_tranny.shape[2];
 __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
     __pyx_t_20.suboffsets[0] = -1;
 
-__pyx_v_v_temp = ((((*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_wages.data + __pyx_t_12 * __pyx_v_wages.strides[0]) ) + __pyx_t_13 * __pyx_v_wages.strides[1]) ) + __pyx_t_14 * __pyx_v_wages.strides[2]) ))) + (*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_c_wages.data + __pyx_t_15 * __pyx_v_c_wages.strides[0]) ) + __pyx_t_16 * __pyx_v_c_wages.strides[1]) ) + __pyx_t_17 * __pyx_v_c_wages.strides[2]) )))) + (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mover.data + __pyx_t_18 * __pyx_v_mover.strides[0]) ) + __pyx_t_19 * __pyx_v_mover.strides[1]) )))) + (__pyx_v_alpha * __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_dot(__pyx_t_20, __pyx_v_V_model)));
+__pyx_v_v_temp = ((((*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_wages.data + __pyx_t_12 * __pyx_v_wages.strides[0]) ) + __pyx_t_13 * __pyx_v_wages.strides[1]) ) + __pyx_t_14 * __pyx_v_wages.strides[2]) ))) + (*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_c_wages.data + __pyx_t_15 * __pyx_v_c_wages.strides[0]) ) + __pyx_t_16 * __pyx_v_c_wages.strides[1]) ) + __pyx_t_17 * __pyx_v_c_wages.strides[2]) )))) + (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mover.data + __pyx_t_18 * __pyx_v_mover.strides[0]) ) + __pyx_t_19 * __pyx_v_mover.strides[1]) )))) + (__pyx_v_alpha * __pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_dot(__pyx_t_20, __pyx_v_V_model)));
           __PYX_XDEC_MEMVIEW(&amp;__pyx_t_20, 0);
           __pyx_t_20.memview = NULL;
           __pyx_t_20.data = NULL;
 </pre><pre class="cython line score-0">&#xA0;<span class="">123</span>: </pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">124</span>:                     <span class="n">v</span><span class="p">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">k</span><span class="o">*</span><span class="n">tot_decisions</span><span class="p">]</span><span class="o">=</span><span class="n">v_temp</span></pre>
-<pre class='cython code score-0 '>          (__pyx_v_v[(__pyx_v_l + (__pyx_v_k * __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_decisions))]) = __pyx_v_v_temp;
+<pre class='cython code score-0 '>          (__pyx_v_v[(__pyx_v_l + (__pyx_v_k * __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_decisions))]) = __pyx_v_v_temp;
 </pre><pre class="cython line score-0">&#xA0;<span class="">125</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">126</span>:                     <span class="c">#sum the exponential of the choice specific value</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">127</span>:                     <span class="n">total</span> <span class="o">+=</span> <span class="n">exp</span><span class="p">(</span><span class="n">v_temp</span><span class="p">)</span></pre>
@@ -850,12 +850,12 @@ __pyx_v_v_temp = ((((*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (_
 </pre><pre class="cython line score-0">&#xA0;<span class="">131</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">132</span>:                 <span class="c">#update the V_model array with the new values</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">133</span>:                 <span class="n">V_model</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="n">tot_states</span><span class="p">]</span> <span class="o">=</span> <span class="n">eg</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="n">total</span><span class="p">)</span></pre>
-<pre class='cython code score-0 '>        (__pyx_v_V_model[(__pyx_v_k + __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states)]) = (__pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_eg + log(__pyx_v_total));
+<pre class='cython code score-0 '>        (__pyx_v_V_model[(__pyx_v_k + __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states)]) = (__pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_eg + log(__pyx_v_total));
       }
 </pre><pre class="cython line score-0">&#xA0;<span class="">134</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">135</span>:             <span class="c">#check for convergence</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">136</span>:             <span class="n">check</span> <span class="o">=</span> <span class="n">infnorm</span><span class="p">(</span><span class="n">V_model</span><span class="p">)</span></pre>
-<pre class='cython code score-0 '>      __pyx_v_check = __pyx_f_46_cython_magic_c98830bf69d441b1320639a5162dfa16_infnorm(__pyx_v_V_model);
+<pre class='cython code score-0 '>      __pyx_v_check = __pyx_f_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_infnorm(__pyx_v_V_model);
 </pre><pre class="cython line score-0">&#xA0;<span class="">137</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">138</span>:             <span class="c">#convergence:</span></pre>
 <pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">139</span>:             <span class="k">if</span> <span class="n">check</span> <span class="o">&lt;</span> <span class="n">tol</span><span class="p">:</span></pre>
@@ -864,34 +864,34 @@ __pyx_v_v_temp = ((((*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (_
 /* … */
       }
 </pre><pre class="cython line score-0">&#xA0;<span class="">140</span>:                 <span class="c">#copy elements from iteration to the output arrays</span></pre>
-<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">141</span>:                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span></pre>
-<pre class='cython code score-0 '>        __pyx_t_8 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states;
+<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">141</span>:                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span></pre>
+<pre class='cython code score-0 '>        __pyx_t_8 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states;
         for (__pyx_t_9 = 0; __pyx_t_9 &lt; __pyx_t_8; __pyx_t_9+=1) {
           __pyx_v_k = __pyx_t_9;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">142</span>:                     <span class="n">V</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">V_model</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="n">tot_states</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>          __pyx_t_21 = __pyx_v_k;
-          *((double *) ( /* dim=0 */ (__pyx_v_V.data + __pyx_t_21 * __pyx_v_V.strides[0]) )) = (__pyx_v_V_model[(__pyx_v_k + __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states)]);
+          *((double *) ( /* dim=0 */ (__pyx_v_V.data + __pyx_t_21 * __pyx_v_V.strides[0]) )) = (__pyx_v_V_model[(__pyx_v_k + __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states)]);
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">143</span>:                     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_decisions</span><span class="p">):</span></pre>
-<pre class='cython code score-0 '>          __pyx_t_10 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_decisions;
+<pre class='cython code score-0 '>          __pyx_t_10 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_decisions;
           for (__pyx_t_11 = 0; __pyx_t_11 &lt; __pyx_t_10; __pyx_t_11+=1) {
             __pyx_v_l = __pyx_t_11;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">144</span>:                         <span class="n">CCP</span><span class="p">[</span><span class="n">l</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">l</span><span class="o">+</span><span class="n">k</span><span class="o">*</span><span class="n">tot_decisions</span><span class="p">])</span><span class="o">/</span><span class="n">sums</span><span class="p">[</span><span class="n">k</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>            __pyx_t_22 = __pyx_v_l;
             __pyx_t_23 = __pyx_v_k;
-            *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_CCP.data + __pyx_t_22 * __pyx_v_CCP.strides[0]) ) + __pyx_t_23 * __pyx_v_CCP.strides[1]) )) = (exp((__pyx_v_v[(__pyx_v_l + (__pyx_v_k * __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_decisions))])) / (__pyx_v_sums[__pyx_v_k]));
+            *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_CCP.data + __pyx_t_22 * __pyx_v_CCP.strides[0]) ) + __pyx_t_23 * __pyx_v_CCP.strides[1]) )) = (exp((__pyx_v_v[(__pyx_v_l + (__pyx_v_k * __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_decisions))])) / (__pyx_v_sums[__pyx_v_k]));
           }
         }
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">145</span>:                 <span class="k">break</span></pre>
 <pre class='cython code score-0 '>        goto __pyx_L13_break;
 </pre><pre class="cython line score-0">&#xA0;<span class="">146</span>:             <span class="c">#move the first column in V_model to the zeroeth column for next iteration</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">147</span>:             <span class="k">else</span><span class="p">:</span></pre>
-<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">148</span>:                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span></pre>
+<pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">148</span>:                 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tot_states</span><span class="p">):</span></pre>
 <pre class='cython code score-0 '>      /*else*/ {
-        __pyx_t_8 = __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states;
+        __pyx_t_8 = __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states;
         for (__pyx_t_9 = 0; __pyx_t_9 &lt; __pyx_t_8; __pyx_t_9+=1) {
           __pyx_v_k = __pyx_t_9;
 </pre><pre class="cython line score-0" onclick='toggleDiv(this)'>+<span class="">149</span>:                     <span class="n">V_model</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">V_model</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="n">tot_states</span><span class="p">]</span></pre>
-<pre class='cython code score-0 '>          (__pyx_v_V_model[__pyx_v_k]) = (__pyx_v_V_model[(__pyx_v_k + __pyx_v_46_cython_magic_c98830bf69d441b1320639a5162dfa16_tot_states)]);
+<pre class='cython code score-0 '>          (__pyx_v_V_model[__pyx_v_k]) = (__pyx_v_V_model[(__pyx_v_k + __pyx_v_46_cython_magic_bf666d5fc10c153e729a3d3f77ca302f_tot_states)]);
         }
       }
     }

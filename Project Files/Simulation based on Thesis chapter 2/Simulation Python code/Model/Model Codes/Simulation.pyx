@@ -1,5 +1,5 @@
 
-# Cython code to optimise in C the solution of the model portion of the code
+# Cython code to optimise in C the Simulation of the model portion of the code
 
 ##################### Import Modules and math functions ######################
 
@@ -41,7 +41,7 @@ cdef inline double rand_value() nogil:
 #This function will fill the allocated memory with the shocks from the GE-3 gumbel                        
 cdef void FILL_shocks(gsl_rng* r, double* arr, Py_ssize_t iter) nogil:
     cdef Py_ssize_t i
-    for i in xrange(iter):
+    for i in range(iter):
         arr[i]=gsl_ran_gumbel1(r,1,1)
 
 ############# Choice Specific Values assisting functions
@@ -150,7 +150,7 @@ cdef void Frequencies(unsigned int* arr, double[:,:] freq, Py_ssize_t curr_gen, 
 
     try:
         #with parallel(num_threads=thread_count):
-        for i in xrange(HH):#, schedule='dynamic'):
+        for i in prange(HH, schedule='dynamic', num_threads=8):
             choice = arr[i + curr_gen*HH]
             for j in range(1,dec_or_state[0]+1):
                 if choice==j:
@@ -253,7 +253,7 @@ cpdef void Sim_Model(double[:] V, double alpha, double[:,:,:] wages,
 
         #outerloop are the generations (make sure that we skip the last generation - they
         #make no decisions - so start iterator at 1 and not 0)
-        for i in xrange(1,Gen):
+        for i in range(1,Gen):
 
             #inner loop the households (should be parallelizable)
             for j in prange(HH, schedule='dynamic', num_threads=8):

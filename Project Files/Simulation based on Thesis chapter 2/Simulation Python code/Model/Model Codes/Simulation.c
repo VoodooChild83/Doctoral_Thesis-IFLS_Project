@@ -10,7 +10,7 @@
             "gslcblas"
         ]
     },
-    "module_name": "_cython_magic_7a80b2ab25bc8891afbc568964d71b88"
+    "module_name": "_cython_magic_fdbf59c57a329acab7ca8c02424134dd"
 }
 END: Cython Metadata */
 
@@ -441,8 +441,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE___cython_magic_7a80b2ab25bc8891afbc568964d71b88
-#define __PYX_HAVE_API___cython_magic_7a80b2ab25bc8891afbc568964d71b88
+#define __PYX_HAVE___cython_magic_fdbf59c57a329acab7ca8c02424134dd
+#define __PYX_HAVE_API___cython_magic_fdbf59c57a329acab7ca8c02424134dd
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
@@ -724,7 +724,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx",
+  "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx",
   "stringsource",
 };
 /* MemviewSliceStruct.proto */
@@ -857,16 +857,16 @@ struct __pyx_memoryviewslice_obj;
 enum  {
   __pyx_e_10cython_gsl_GSL_SUCCESS = 0
 };
-struct __pyx_opt_args_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum;
+struct __pyx_opt_args_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum;
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":82
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":82
  * 
  * #This function rewrites array with the cumulative sum through recursion
  * cdef void cum_sum(double *arr, size_t index=4-1) nogil:             # <<<<<<<<<<<<<<
  *     if index<=0: return
  *     cum_sum(arr, index-1)
  */
-struct __pyx_opt_args_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum {
+struct __pyx_opt_args_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum {
   int __pyx_n;
   size_t index;
 };
@@ -1628,15 +1628,15 @@ static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memo
 
 /* Module declarations from 'cython_gsl' */
 
-/* Module declarations from '_cython_magic_7a80b2ab25bc8891afbc568964d71b88' */
+/* Module declarations from '_cython_magic_fdbf59c57a329acab7ca8c02424134dd' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
 static PyTypeObject *__pyx_memoryviewslice_type = 0;
-static Py_ssize_t __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH;
-static Py_ssize_t __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states;
-static Py_ssize_t __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions;
-static Py_ssize_t __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Gen;
+static Py_ssize_t __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH;
+static Py_ssize_t __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states;
+static Py_ssize_t __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions;
+static Py_ssize_t __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Gen;
 static PyObject *generic = 0;
 static PyObject *strided = 0;
 static PyObject *indirect = 0;
@@ -1644,16 +1644,16 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static CYTHON_INLINE double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_rand_value(void); /*proto*/
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_FILL_shocks(gsl_rng *, double *, Py_ssize_t); /*proto*/
-static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx_memviewslice, __Pyx_memviewslice); /*proto*/
-static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compare(double *, size_t); /*proto*/
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(double *, struct __pyx_opt_args_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum *__pyx_optional_args); /*proto*/
-static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_find_interval(double, double *); /*proto*/
-static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Next_State(__Pyx_memviewslice); /*proto*/
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies(unsigned int *, __Pyx_memviewslice, Py_ssize_t, unsigned int); /*proto*/
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigned int *, unsigned int *, size_t, __Pyx_memviewslice); /*proto*/
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(__Pyx_memviewslice, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static CYTHON_INLINE double __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_rand_value(void); /*proto*/
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_FILL_shocks(gsl_rng *, double *, Py_ssize_t); /*proto*/
+static double __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_dot(__Pyx_memviewslice, __Pyx_memviewslice); /*proto*/
+static Py_ssize_t __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Compare(double *, size_t); /*proto*/
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum(double *, struct __pyx_opt_args_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum *__pyx_optional_args); /*proto*/
+static unsigned int __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_find_interval(double, double *); /*proto*/
+static unsigned int __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Next_State(__Pyx_memviewslice); /*proto*/
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Frequencies(unsigned int *, __Pyx_memviewslice, Py_ssize_t, unsigned int); /*proto*/
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_CCP(unsigned int *, unsigned int *, size_t, __Pyx_memviewslice); /*proto*/
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Sim_Model(__Pyx_memviewslice, double, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -1688,11 +1688,10 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_int = { "int", NULL, sizeof(int), { 0 }, 0, IS_UNSIGNED(int) ? 'U' : 'I', IS_UNSIGNED(int), 0 };
-#define __Pyx_MODULE_NAME "_cython_magic_7a80b2ab25bc8891afbc568964d71b88"
-int __pyx_module_is_main__cython_magic_7a80b2ab25bc8891afbc568964d71b88 = 0;
+#define __Pyx_MODULE_NAME "_cython_magic_fdbf59c57a329acab7ca8c02424134dd"
+int __pyx_module_is_main__cython_magic_fdbf59c57a329acab7ca8c02424134dd = 0;
 
-/* Implementation of '_cython_magic_7a80b2ab25bc8891afbc568964d71b88' */
-static PyObject *__pyx_builtin_xrange;
+/* Implementation of '_cython_magic_fdbf59c57a329acab7ca8c02424134dd' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
@@ -1736,7 +1735,6 @@ static const char __pyx_k_name_2[] = "__name__";
 static const char __pyx_k_struct[] = "struct";
 static const char __pyx_k_tranny[] = "tranny";
 static const char __pyx_k_unpack[] = "unpack";
-static const char __pyx_k_xrange[] = "xrange";
 static const char __pyx_k_fortran[] = "fortran";
 static const char __pyx_k_memview[] = "memview";
 static const char __pyx_k_Ellipsis[] = "Ellipsis";
@@ -1846,8 +1844,7 @@ static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_wages;
-static PyObject *__pyx_n_s_xrange;
-static PyObject *__pyx_pf_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_V, double __pyx_v_alpha, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_child, __Pyx_memviewslice __pyx_v_move, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_demos, __Pyx_memviewslice __pyx_v_dec_freq, __Pyx_memviewslice __pyx_v_states_freq, __Pyx_memviewslice __pyx_v_CCPs, __Pyx_memviewslice __pyx_v_init_states); /* proto */
+static PyObject *__pyx_pf_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Sim_Model(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_V, double __pyx_v_alpha, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_child, __Pyx_memviewslice __pyx_v_move, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_demos, __Pyx_memviewslice __pyx_v_dec_freq, __Pyx_memviewslice __pyx_v_states_freq, __Pyx_memviewslice __pyx_v_CCPs, __Pyx_memviewslice __pyx_v_init_states); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -1907,7 +1904,7 @@ static PyObject *__pyx_tuple__17;
 static PyObject *__pyx_tuple__18;
 static PyObject *__pyx_tuple__19;
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":38
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":38
  * 
  * #Random number generator on interval [0,1]
  * cdef inline double rand_value() nogil:             # <<<<<<<<<<<<<<
@@ -1915,10 +1912,10 @@ static PyObject *__pyx_tuple__19;
  * 
  */
 
-static CYTHON_INLINE double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_rand_value(void) {
+static CYTHON_INLINE double __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_rand_value(void) {
   double __pyx_r;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":39
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":39
  * #Random number generator on interval [0,1]
  * cdef inline double rand_value() nogil:
  *     return rand()/<double>RAND_MAX             # <<<<<<<<<<<<<<
@@ -1928,7 +1925,7 @@ static CYTHON_INLINE double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d7
   __pyx_r = (((double)rand()) / ((double)RAND_MAX));
   goto __pyx_L0;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":38
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":38
  * 
  * #Random number generator on interval [0,1]
  * cdef inline double rand_value() nogil:             # <<<<<<<<<<<<<<
@@ -1941,23 +1938,23 @@ static CYTHON_INLINE double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d7
   return __pyx_r;
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":42
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":42
  * 
  * #This function will fill the allocated memory with the shocks from the GE-3 gumbel
  * cdef void FILL_shocks(gsl_rng* r, double* arr, Py_ssize_t iter) nogil:             # <<<<<<<<<<<<<<
  *     cdef Py_ssize_t i
- *     for i in xrange(iter):
+ *     for i in range(iter):
  */
 
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_FILL_shocks(gsl_rng *__pyx_v_r, double *__pyx_v_arr, Py_ssize_t __pyx_v_iter) {
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_FILL_shocks(gsl_rng *__pyx_v_r, double *__pyx_v_arr, Py_ssize_t __pyx_v_iter) {
   Py_ssize_t __pyx_v_i;
   Py_ssize_t __pyx_t_1;
   Py_ssize_t __pyx_t_2;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":44
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":44
  * cdef void FILL_shocks(gsl_rng* r, double* arr, Py_ssize_t iter) nogil:
  *     cdef Py_ssize_t i
- *     for i in xrange(iter):             # <<<<<<<<<<<<<<
+ *     for i in range(iter):             # <<<<<<<<<<<<<<
  *         arr[i]=gsl_ran_gumbel1(r,1,1)
  * 
  */
@@ -1965,9 +1962,9 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_FILL_shocks
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":45
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":45
  *     cdef Py_ssize_t i
- *     for i in xrange(iter):
+ *     for i in range(iter):
  *         arr[i]=gsl_ran_gumbel1(r,1,1)             # <<<<<<<<<<<<<<
  * 
  * ############# Choice Specific Values assisting functions
@@ -1975,18 +1972,18 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_FILL_shocks
     (__pyx_v_arr[__pyx_v_i]) = gsl_ran_gumbel1(__pyx_v_r, 1.0, 1.0);
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":42
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":42
  * 
  * #This function will fill the allocated memory with the shocks from the GE-3 gumbel
  * cdef void FILL_shocks(gsl_rng* r, double* arr, Py_ssize_t iter) nogil:             # <<<<<<<<<<<<<<
  *     cdef Py_ssize_t i
- *     for i in xrange(iter):
+ *     for i in range(iter):
  */
 
   /* function exit code */
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":50
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":50
  * 
  * #Define the inner-array product, releasing the gil of the function
  * cdef double dot( double[:] a, double[:] b ) nogil:             # <<<<<<<<<<<<<<
@@ -1994,7 +1991,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_FILL_shocks
  *         double result=0
  */
 
-static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx_memviewslice __pyx_v_a, __Pyx_memviewslice __pyx_v_b) {
+static double __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_dot(__Pyx_memviewslice __pyx_v_a, __Pyx_memviewslice __pyx_v_b) {
   double __pyx_v_result;
   Py_ssize_t __pyx_v_i;
   Py_ssize_t __pyx_v_dim;
@@ -2004,7 +2001,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
   Py_ssize_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":52
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":52
  * cdef double dot( double[:] a, double[:] b ) nogil:
  *     cdef:
  *         double result=0             # <<<<<<<<<<<<<<
@@ -2013,7 +2010,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
  */
   __pyx_v_result = 0.0;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":53
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":53
  *     cdef:
  *         double result=0
  *         Py_ssize_t i, dim=a.shape[0]             # <<<<<<<<<<<<<<
@@ -2022,7 +2019,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
  */
   __pyx_v_dim = (__pyx_v_a.shape[0]);
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":55
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":55
  *         Py_ssize_t i, dim=a.shape[0]
  * 
  *     for i in range(dim):             # <<<<<<<<<<<<<<
@@ -2033,7 +2030,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":56
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":56
  * 
  *     for i in range(dim):
  *         result += a[i]*b[i]             # <<<<<<<<<<<<<<
@@ -2045,7 +2042,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
     __pyx_v_result = (__pyx_v_result + ((*((double *) ( /* dim=0 */ (__pyx_v_a.data + __pyx_t_3 * __pyx_v_a.strides[0]) ))) * (*((double *) ( /* dim=0 */ (__pyx_v_b.data + __pyx_t_4 * __pyx_v_b.strides[0]) )))));
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":57
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":57
  *     for i in range(dim):
  *         result += a[i]*b[i]
  *     return result             # <<<<<<<<<<<<<<
@@ -2055,7 +2052,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":50
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":50
  * 
  * #Define the inner-array product, releasing the gil of the function
  * cdef double dot( double[:] a, double[:] b ) nogil:             # <<<<<<<<<<<<<<
@@ -2068,7 +2065,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
   return __pyx_r;
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":60
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":60
  * 
  * #This function will output the decision based on max value
  * cdef Py_ssize_t Compare(double* arr, size_t curr_hh) nogil:             # <<<<<<<<<<<<<<
@@ -2076,7 +2073,7 @@ static double __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__Pyx
  *     #declare variable types
  */
 
-static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compare(double *__pyx_v_arr, size_t __pyx_v_curr_hh) {
+static Py_ssize_t __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Compare(double *__pyx_v_arr, size_t __pyx_v_curr_hh) {
   Py_ssize_t __pyx_v_dec;
   Py_ssize_t __pyx_v_i;
   double __pyx_v_v_temp;
@@ -2086,7 +2083,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
   Py_ssize_t __pyx_t_2;
   int __pyx_t_3;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":64
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":64
  *     #declare variable types
  *     cdef:
  *         Py_ssize_t dec=0, i             # <<<<<<<<<<<<<<
@@ -2095,7 +2092,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
  */
   __pyx_v_dec = 0;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":65
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":65
  *     cdef:
  *         Py_ssize_t dec=0, i
  *         double v_temp, MAX=(-1)*HUGE_VAL             # <<<<<<<<<<<<<<
@@ -2104,27 +2101,27 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
  */
   __pyx_v_MAX = (-1.0 * HUGE_VAL);
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":68
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":68
  * 
  *     #grab the max of the choice specific value for the current household:
  *     for i in range(1,tot_decisions+1):             # <<<<<<<<<<<<<<
  *         v_temp = arr[(i-1) + curr_hh*tot_decisions]
  *         if v_temp > MAX:
  */
-  __pyx_t_1 = (__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions + 1);
+  __pyx_t_1 = (__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions + 1);
   for (__pyx_t_2 = 1; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":69
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":69
  *     #grab the max of the choice specific value for the current household:
  *     for i in range(1,tot_decisions+1):
  *         v_temp = arr[(i-1) + curr_hh*tot_decisions]             # <<<<<<<<<<<<<<
  *         if v_temp > MAX:
  *             #update the max
  */
-    __pyx_v_v_temp = (__pyx_v_arr[((__pyx_v_i - 1) + (__pyx_v_curr_hh * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions))]);
+    __pyx_v_v_temp = (__pyx_v_arr[((__pyx_v_i - 1) + (__pyx_v_curr_hh * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions))]);
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":70
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":70
  *     for i in range(1,tot_decisions+1):
  *         v_temp = arr[(i-1) + curr_hh*tot_decisions]
  *         if v_temp > MAX:             # <<<<<<<<<<<<<<
@@ -2134,7 +2131,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
     __pyx_t_3 = ((__pyx_v_v_temp > __pyx_v_MAX) != 0);
     if (__pyx_t_3) {
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":72
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":72
  *         if v_temp > MAX:
  *             #update the max
  *             MAX = v_temp             # <<<<<<<<<<<<<<
@@ -2143,7 +2140,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
  */
       __pyx_v_MAX = __pyx_v_v_temp;
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":74
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":74
  *             MAX = v_temp
  *             #capture current index
  *             dec = i             # <<<<<<<<<<<<<<
@@ -2152,7 +2149,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
  */
       __pyx_v_dec = __pyx_v_i;
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":70
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":70
  *     for i in range(1,tot_decisions+1):
  *         v_temp = arr[(i-1) + curr_hh*tot_decisions]
  *         if v_temp > MAX:             # <<<<<<<<<<<<<<
@@ -2162,7 +2159,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
     }
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":76
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":76
  *             dec = i
  * 
  *     return dec             # <<<<<<<<<<<<<<
@@ -2172,7 +2169,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
   __pyx_r = __pyx_v_dec;
   goto __pyx_L0;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":60
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":60
  * 
  * #This function will output the decision based on max value
  * cdef Py_ssize_t Compare(double* arr, size_t curr_hh) nogil:             # <<<<<<<<<<<<<<
@@ -2185,7 +2182,7 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
   return __pyx_r;
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":82
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":82
  * 
  * #This function rewrites array with the cumulative sum through recursion
  * cdef void cum_sum(double *arr, size_t index=4-1) nogil:             # <<<<<<<<<<<<<<
@@ -2193,10 +2190,10 @@ static Py_ssize_t __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compa
  *     cum_sum(arr, index-1)
  */
 
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(double *__pyx_v_arr, struct __pyx_opt_args_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum *__pyx_optional_args) {
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum(double *__pyx_v_arr, struct __pyx_opt_args_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum *__pyx_optional_args) {
   size_t __pyx_v_index = __pyx_k_;
   int __pyx_t_1;
-  struct __pyx_opt_args_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum __pyx_t_2;
+  struct __pyx_opt_args_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum __pyx_t_2;
   size_t __pyx_t_3;
   if (__pyx_optional_args) {
     if (__pyx_optional_args->__pyx_n > 0) {
@@ -2204,7 +2201,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(dou
     }
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":83
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":83
  * #This function rewrites array with the cumulative sum through recursion
  * cdef void cum_sum(double *arr, size_t index=4-1) nogil:
  *     if index<=0: return             # <<<<<<<<<<<<<<
@@ -2216,7 +2213,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(dou
     goto __pyx_L0;
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":84
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":84
  * cdef void cum_sum(double *arr, size_t index=4-1) nogil:
  *     if index<=0: return
  *     cum_sum(arr, index-1)             # <<<<<<<<<<<<<<
@@ -2225,9 +2222,9 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(dou
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.index = (__pyx_v_index - 1);
-  __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(__pyx_v_arr, &__pyx_t_2); 
+  __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum(__pyx_v_arr, &__pyx_t_2); 
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":85
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":85
  *     if index<=0: return
  *     cum_sum(arr, index-1)
  *     arr[index] += arr[index-1]             # <<<<<<<<<<<<<<
@@ -2237,7 +2234,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(dou
   __pyx_t_3 = __pyx_v_index;
   (__pyx_v_arr[__pyx_t_3]) = ((__pyx_v_arr[__pyx_t_3]) + (__pyx_v_arr[(__pyx_v_index - 1)]));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":82
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":82
  * 
  * #This function rewrites array with the cumulative sum through recursion
  * cdef void cum_sum(double *arr, size_t index=4-1) nogil:             # <<<<<<<<<<<<<<
@@ -2249,7 +2246,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(dou
   __pyx_L0:;
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":89
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":89
  * #This function will determine the index of the transition function
  * #based on the cumulative probabilities
  * cdef unsigned int find_interval(double x, double *arr) nogil:             # <<<<<<<<<<<<<<
@@ -2257,25 +2254,25 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(dou
  * 
  */
 
-static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_find_interval(double __pyx_v_x, double *__pyx_v_arr) {
+static unsigned int __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_find_interval(double __pyx_v_x, double *__pyx_v_arr) {
   Py_ssize_t __pyx_v_i;
   unsigned int __pyx_r;
   Py_ssize_t __pyx_t_1;
   Py_ssize_t __pyx_t_2;
   int __pyx_t_3;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":92
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":92
  *     cdef Py_ssize_t i
  * 
  *     for i in range(tot_states):             # <<<<<<<<<<<<<<
  *         if x<arr[i]:
  *             return i
  */
-  __pyx_t_1 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states;
+  __pyx_t_1 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states;
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":93
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":93
  * 
  *     for i in range(tot_states):
  *         if x<arr[i]:             # <<<<<<<<<<<<<<
@@ -2285,7 +2282,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_fin
     __pyx_t_3 = ((__pyx_v_x < (__pyx_v_arr[__pyx_v_i])) != 0);
     if (__pyx_t_3) {
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":94
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":94
  *     for i in range(tot_states):
  *         if x<arr[i]:
  *             return i             # <<<<<<<<<<<<<<
@@ -2295,7 +2292,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_fin
       __pyx_r = __pyx_v_i;
       goto __pyx_L0;
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":93
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":93
  * 
  *     for i in range(tot_states):
  *         if x<arr[i]:             # <<<<<<<<<<<<<<
@@ -2305,7 +2302,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_fin
     }
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":89
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":89
  * #This function will determine the index of the transition function
  * #based on the cumulative probabilities
  * cdef unsigned int find_interval(double x, double *arr) nogil:             # <<<<<<<<<<<<<<
@@ -2319,7 +2316,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_fin
   return __pyx_r;
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":98
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":98
  * #This function will generate the next state based on the transition
  * #function probabilites (a discrete value)
  * cdef unsigned int Next_State(double[:] tran) nogil:             # <<<<<<<<<<<<<<
@@ -2327,7 +2324,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_fin
  *         double x
  */
 
-static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Next_State(__Pyx_memviewslice __pyx_v_tran) {
+static unsigned int __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Next_State(__Pyx_memviewslice __pyx_v_tran) {
   double __pyx_v_x;
   double *__pyx_v_array;
   unsigned int __pyx_v_index;
@@ -2338,16 +2335,16 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
   Py_ssize_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":105
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":105
  *         Py_ssize_t i
  * 
  *     array=<double*> calloc(tot_states, sizeof(double))             # <<<<<<<<<<<<<<
  * 
  *     if not array: abort()
  */
-  __pyx_v_array = ((double *)calloc(__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states, (sizeof(double))));
+  __pyx_v_array = ((double *)calloc(__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states, (sizeof(double))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":107
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":107
  *     array=<double*> calloc(tot_states, sizeof(double))
  * 
  *     if not array: abort()             # <<<<<<<<<<<<<<
@@ -2359,7 +2356,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
     abort();
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":109
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":109
  *     if not array: abort()
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -2368,27 +2365,27 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
  */
   /*try:*/ {
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":111
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":111
  *     try:
  *         #generate a random number to help determine the next state
  *         x = rand_value()             # <<<<<<<<<<<<<<
  * 
  *         #copy the transition function values into the array to prevent rewrite
  */
-    __pyx_v_x = __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_rand_value();
+    __pyx_v_x = __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_rand_value();
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":114
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":114
  * 
  *         #copy the transition function values into the array to prevent rewrite
  *         for i in range(tot_states):             # <<<<<<<<<<<<<<
  *             array[i]=tran[i]
  * 
  */
-    __pyx_t_2 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states;
+    __pyx_t_2 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states;
     for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":115
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":115
  *         #copy the transition function values into the array to prevent rewrite
  *         for i in range(tot_states):
  *             array[i]=tran[i]             # <<<<<<<<<<<<<<
@@ -2399,25 +2396,25 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
       (__pyx_v_array[__pyx_v_i]) = (*((double *) ( /* dim=0 */ (__pyx_v_tran.data + __pyx_t_4 * __pyx_v_tran.strides[0]) )));
     }
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":118
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":118
  * 
  *         #rewrite the array into the cumulative sum of the elements
  *         cum_sum(array)             # <<<<<<<<<<<<<<
  * 
  *         #the next state is the return value of the function
  */
-    __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_cum_sum(__pyx_v_array, NULL);
+    __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_cum_sum(__pyx_v_array, NULL);
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":122
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":122
  *         #the next state is the return value of the function
  *         #(the array index) + 1 to create the next state
  *         index = find_interval(x, array) + 1             # <<<<<<<<<<<<<<
  * 
  *         return index
  */
-    __pyx_v_index = (__pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_find_interval(__pyx_v_x, __pyx_v_array) + 1);
+    __pyx_v_index = (__pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_find_interval(__pyx_v_x, __pyx_v_array) + 1);
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":124
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":124
  *         index = find_interval(x, array) + 1
  * 
  *         return index             # <<<<<<<<<<<<<<
@@ -2428,7 +2425,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
     goto __pyx_L4_return;
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":127
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":127
  * 
  *     finally:
  *         free(array)             # <<<<<<<<<<<<<<
@@ -2442,7 +2439,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
     }
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":98
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":98
  * #This function will generate the next state based on the transition
  * #function probabilites (a discrete value)
  * cdef unsigned int Next_State(double[:] tran) nogil:             # <<<<<<<<<<<<<<
@@ -2455,7 +2452,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
   return __pyx_r;
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":133
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":133
  * 
  * #This function will calculate the frequency of decisions for each generation
  * cdef void Frequencies(unsigned int* arr, double[:,:] freq, Py_ssize_t curr_gen, unsigned int flag) nogil:             # <<<<<<<<<<<<<<
@@ -2463,7 +2460,7 @@ static unsigned int __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Nex
  *         unsigned int choice
  */
 
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies(unsigned int *__pyx_v_arr, __Pyx_memviewslice __pyx_v_freq, Py_ssize_t __pyx_v_curr_gen, unsigned int __pyx_v_flag) {
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Frequencies(unsigned int *__pyx_v_arr, __Pyx_memviewslice __pyx_v_freq, Py_ssize_t __pyx_v_curr_gen, unsigned int __pyx_v_flag) {
   unsigned int __pyx_v_choice;
   unsigned int *__pyx_v_counter;
   Py_ssize_t *__pyx_v_dec_or_state;
@@ -2477,8 +2474,9 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
   Py_ssize_t __pyx_t_6;
   Py_ssize_t __pyx_t_7;
   Py_ssize_t __pyx_t_8;
+  Py_ssize_t __pyx_t_9;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":141
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":141
  * 
  *     #use flag to designate to which global variable 'dec_or_state' points to
  *     if flag==1:             # <<<<<<<<<<<<<<
@@ -2488,16 +2486,16 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
   __pyx_t_1 = ((__pyx_v_flag == 1) != 0);
   if (__pyx_t_1) {
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":142
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":142
  *     #use flag to designate to which global variable 'dec_or_state' points to
  *     if flag==1:
  *         dec_or_state=&tot_decisions             # <<<<<<<<<<<<<<
  *     else:
  *         dec_or_state=&tot_states
  */
-    __pyx_v_dec_or_state = (&__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions);
+    __pyx_v_dec_or_state = (&__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions);
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":141
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":141
  * 
  *     #use flag to designate to which global variable 'dec_or_state' points to
  *     if flag==1:             # <<<<<<<<<<<<<<
@@ -2507,7 +2505,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
     goto __pyx_L3;
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":144
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":144
  *         dec_or_state=&tot_decisions
  *     else:
  *         dec_or_state=&tot_states             # <<<<<<<<<<<<<<
@@ -2515,11 +2513,11 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
  *     #allocate and fill the counter array with 0s
  */
   /*else*/ {
-    __pyx_v_dec_or_state = (&__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states);
+    __pyx_v_dec_or_state = (&__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states);
   }
   __pyx_L3:;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":147
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":147
  * 
  *     #allocate and fill the counter array with 0s
  *     counter=<unsigned int*> calloc(dec_or_state[0], sizeof(unsigned int))             # <<<<<<<<<<<<<<
@@ -2528,7 +2526,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
  */
   __pyx_v_counter = ((unsigned int *)calloc((__pyx_v_dec_or_state[0]), (sizeof(unsigned int))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":149
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":149
  *     counter=<unsigned int*> calloc(dec_or_state[0], sizeof(unsigned int))
  * 
  *     if not counter: abort()             # <<<<<<<<<<<<<<
@@ -2540,102 +2538,134 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
     abort();
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":151
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":151
  *     if not counter: abort()
  * 
  *     try:             # <<<<<<<<<<<<<<
  *         #with parallel(num_threads=thread_count):
- *         for i in xrange(HH):#, schedule='dynamic'):
+ *         for i in prange(HH, schedule='dynamic', num_threads=8):
  */
   /*try:*/ {
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":153
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":153
  *     try:
  *         #with parallel(num_threads=thread_count):
- *         for i in xrange(HH):#, schedule='dynamic'):             # <<<<<<<<<<<<<<
+ *         for i in prange(HH, schedule='dynamic', num_threads=8):             # <<<<<<<<<<<<<<
  *             choice = arr[i + curr_gen*HH]
  *             for j in range(1,dec_or_state[0]+1):
  */
-    __pyx_t_2 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH;
-    for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
-      __pyx_v_i = __pyx_t_3;
+    __pyx_t_2 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH;
+    if (1 == 0) abort();
+    {
+        #if ((defined(__APPLE__) || defined(__OSX__)) && (defined(__GNUC__) && (__GNUC__ > 2 || (__GNUC__ == 2 && (__GNUC_MINOR__ > 95)))))
+            #undef likely
+            #undef unlikely
+            #define likely(x)   (x)
+            #define unlikely(x) (x)
+        #endif
+        __pyx_t_4 = (__pyx_t_2 - 0 + 1 - 1/abs(1)) / 1;
+        if (__pyx_t_4 > 0)
+        {
+            #ifdef _OPENMP
+            #pragma omp parallel num_threads(8) private(__pyx_t_1, __pyx_t_5, __pyx_t_6, __pyx_t_7)
+            #endif /* _OPENMP */
+            {
+                #ifdef _OPENMP
+                #pragma omp for lastprivate(__pyx_v_choice) firstprivate(__pyx_v_i) lastprivate(__pyx_v_i) lastprivate(__pyx_v_j) schedule(dynamic)
+                #endif /* _OPENMP */
+                for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_4; __pyx_t_3++){
+                    {
+                        __pyx_v_i = (Py_ssize_t)(0 + 1 * __pyx_t_3);
+                        /* Initialize private variables to invalid values */
+                        __pyx_v_choice = ((unsigned int)0xbad0bad0);
+                        __pyx_v_j = ((Py_ssize_t)0xbad0bad0);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":154
+                        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":154
  *         #with parallel(num_threads=thread_count):
- *         for i in xrange(HH):#, schedule='dynamic'):
+ *         for i in prange(HH, schedule='dynamic', num_threads=8):
  *             choice = arr[i + curr_gen*HH]             # <<<<<<<<<<<<<<
  *             for j in range(1,dec_or_state[0]+1):
  *                 if choice==j:
  */
-      __pyx_v_choice = (__pyx_v_arr[(__pyx_v_i + (__pyx_v_curr_gen * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH))]);
+                        __pyx_v_choice = (__pyx_v_arr[(__pyx_v_i + (__pyx_v_curr_gen * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH))]);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":155
- *         for i in xrange(HH):#, schedule='dynamic'):
+                        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":155
+ *         for i in prange(HH, schedule='dynamic', num_threads=8):
  *             choice = arr[i + curr_gen*HH]
  *             for j in range(1,dec_or_state[0]+1):             # <<<<<<<<<<<<<<
  *                 if choice==j:
  *                     counter[j-1]+=1
  */
-      __pyx_t_4 = ((__pyx_v_dec_or_state[0]) + 1);
-      for (__pyx_t_5 = 1; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
-        __pyx_v_j = __pyx_t_5;
+                        __pyx_t_5 = ((__pyx_v_dec_or_state[0]) + 1);
+                        for (__pyx_t_6 = 1; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
+                          __pyx_v_j = __pyx_t_6;
 
-        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":156
+                          /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":156
  *             choice = arr[i + curr_gen*HH]
  *             for j in range(1,dec_or_state[0]+1):
  *                 if choice==j:             # <<<<<<<<<<<<<<
  *                     counter[j-1]+=1
  * 
  */
-        __pyx_t_1 = ((__pyx_v_choice == __pyx_v_j) != 0);
-        if (__pyx_t_1) {
+                          __pyx_t_1 = ((__pyx_v_choice == __pyx_v_j) != 0);
+                          if (__pyx_t_1) {
 
-          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":157
+                            /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":157
  *             for j in range(1,dec_or_state[0]+1):
  *                 if choice==j:
  *                     counter[j-1]+=1             # <<<<<<<<<<<<<<
  * 
  *         for i in range(tot_states):
  */
-          __pyx_t_6 = (__pyx_v_j - 1);
-          (__pyx_v_counter[__pyx_t_6]) = ((__pyx_v_counter[__pyx_t_6]) + 1);
+                            __pyx_t_7 = (__pyx_v_j - 1);
+                            (__pyx_v_counter[__pyx_t_7]) = ((__pyx_v_counter[__pyx_t_7]) + 1);
 
-          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":156
+                            /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":156
  *             choice = arr[i + curr_gen*HH]
  *             for j in range(1,dec_or_state[0]+1):
  *                 if choice==j:             # <<<<<<<<<<<<<<
  *                     counter[j-1]+=1
  * 
  */
+                          }
+                        }
+                    }
+                }
+            }
         }
-      }
     }
+    #if ((defined(__APPLE__) || defined(__OSX__)) && (defined(__GNUC__) && (__GNUC__ > 2 || (__GNUC__ == 2 && (__GNUC_MINOR__ > 95)))))
+        #undef likely
+        #undef unlikely
+        #define likely(x)   __builtin_expect(!!(x), 1)
+        #define unlikely(x) __builtin_expect(!!(x), 0)
+    #endif
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":159
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":159
  *                     counter[j-1]+=1
  * 
  *         for i in range(tot_states):             # <<<<<<<<<<<<<<
  *             freq[i,curr_gen] = counter[i]/<double>HH
  *     finally:
  */
-    __pyx_t_2 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states;
-    for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
+    __pyx_t_4 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states;
+    for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_4; __pyx_t_3+=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":160
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":160
  * 
  *         for i in range(tot_states):
  *             freq[i,curr_gen] = counter[i]/<double>HH             # <<<<<<<<<<<<<<
  *     finally:
  *         free(counter)
  */
-      __pyx_t_7 = __pyx_v_i;
-      __pyx_t_8 = __pyx_v_curr_gen;
-      *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_freq.data + __pyx_t_7 * __pyx_v_freq.strides[0]) ) + __pyx_t_8 * __pyx_v_freq.strides[1]) )) = (((double)(__pyx_v_counter[__pyx_v_i])) / ((double)__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH));
+      __pyx_t_8 = __pyx_v_i;
+      __pyx_t_9 = __pyx_v_curr_gen;
+      *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_freq.data + __pyx_t_8 * __pyx_v_freq.strides[0]) ) + __pyx_t_9 * __pyx_v_freq.strides[1]) )) = (((double)(__pyx_v_counter[__pyx_v_i])) / ((double)__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH));
     }
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":162
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":162
  *             freq[i,curr_gen] = counter[i]/<double>HH
  *     finally:
  *         free(counter)             # <<<<<<<<<<<<<<
@@ -2650,7 +2680,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
     __pyx_L7:;
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":133
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":133
  * 
  * #This function will calculate the frequency of decisions for each generation
  * cdef void Frequencies(unsigned int* arr, double[:,:] freq, Py_ssize_t curr_gen, unsigned int flag) nogil:             # <<<<<<<<<<<<<<
@@ -2661,7 +2691,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
   /* function exit code */
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":165
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":165
  * 
  * #This function will calculate the empirical CCPs for whichever chosen generation
  * cdef void CCP(unsigned int* dec_arr, unsigned int* state_arr,             # <<<<<<<<<<<<<<
@@ -2669,7 +2699,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies
  * 
  */
 
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigned int *__pyx_v_dec_arr, unsigned int *__pyx_v_state_arr, size_t __pyx_v_gen, __Pyx_memviewslice __pyx_v_freq) {
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_CCP(unsigned int *__pyx_v_dec_arr, unsigned int *__pyx_v_state_arr, size_t __pyx_v_gen, __Pyx_memviewslice __pyx_v_freq) {
   unsigned int __pyx_v_choice;
   unsigned int __pyx_v_state;
   unsigned int *__pyx_v_counter;
@@ -2690,25 +2720,25 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
   Py_ssize_t __pyx_t_11;
   Py_ssize_t __pyx_t_12;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":176
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":176
  * 
  *     #allocate the counter arrays with 0s
  *     counter=<unsigned int*> calloc(tot_states*tot_decisions, sizeof(unsigned int))             # <<<<<<<<<<<<<<
  *     sums=<double*> calloc(tot_states, sizeof(double))
  * 
  */
-  __pyx_v_counter = ((unsigned int *)calloc((__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions), (sizeof(unsigned int))));
+  __pyx_v_counter = ((unsigned int *)calloc((__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions), (sizeof(unsigned int))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":177
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":177
  *     #allocate the counter arrays with 0s
  *     counter=<unsigned int*> calloc(tot_states*tot_decisions, sizeof(unsigned int))
  *     sums=<double*> calloc(tot_states, sizeof(double))             # <<<<<<<<<<<<<<
  * 
  *     if not (counter or sums): abort()
  */
-  __pyx_v_sums = ((double *)calloc(__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states, (sizeof(double))));
+  __pyx_v_sums = ((double *)calloc(__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states, (sizeof(double))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":179
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":179
  *     sums=<double*> calloc(tot_states, sizeof(double))
  * 
  *     if not (counter or sums): abort()             # <<<<<<<<<<<<<<
@@ -2729,7 +2759,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
     abort();
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":181
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":181
  *     if not (counter or sums): abort()
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -2738,14 +2768,14 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
  */
   /*try:*/ {
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":183
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":183
  *     try:
  *         #count the penultimate generation's states and decisions
  *         for i in prange(HH, schedule='dynamic', num_threads=8):             # <<<<<<<<<<<<<<
  *             state = state_arr[i + gen*HH]
  *             choice = dec_arr[i + gen*HH]
  */
-    __pyx_t_3 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH;
+    __pyx_t_3 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH;
     if (1 == 0) abort();
     {
         #if ((defined(__APPLE__) || defined(__OSX__)) && (defined(__GNUC__) && (__GNUC__ > 2 || (__GNUC__ == 2 && (__GNUC_MINOR__ > 95)))))
@@ -2773,36 +2803,36 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
                         __pyx_v_k = ((Py_ssize_t)0xbad0bad0);
                         __pyx_v_state = ((unsigned int)0xbad0bad0);
 
-                        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":184
+                        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":184
  *         #count the penultimate generation's states and decisions
  *         for i in prange(HH, schedule='dynamic', num_threads=8):
  *             state = state_arr[i + gen*HH]             # <<<<<<<<<<<<<<
  *             choice = dec_arr[i + gen*HH]
  *             for j in range(1,tot_states+1):
  */
-                        __pyx_v_state = (__pyx_v_state_arr[(__pyx_v_i + (__pyx_v_gen * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH))]);
+                        __pyx_v_state = (__pyx_v_state_arr[(__pyx_v_i + (__pyx_v_gen * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH))]);
 
-                        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":185
+                        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":185
  *         for i in prange(HH, schedule='dynamic', num_threads=8):
  *             state = state_arr[i + gen*HH]
  *             choice = dec_arr[i + gen*HH]             # <<<<<<<<<<<<<<
  *             for j in range(1,tot_states+1):
  *                 if state==j:
  */
-                        __pyx_v_choice = (__pyx_v_dec_arr[(__pyx_v_i + (__pyx_v_gen * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH))]);
+                        __pyx_v_choice = (__pyx_v_dec_arr[(__pyx_v_i + (__pyx_v_gen * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH))]);
 
-                        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":186
+                        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":186
  *             state = state_arr[i + gen*HH]
  *             choice = dec_arr[i + gen*HH]
  *             for j in range(1,tot_states+1):             # <<<<<<<<<<<<<<
  *                 if state==j:
  *                     sums[j-1] +=1
  */
-                        __pyx_t_6 = (__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states + 1);
+                        __pyx_t_6 = (__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states + 1);
                         for (__pyx_t_7 = 1; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
                           __pyx_v_j = __pyx_t_7;
 
-                          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":187
+                          /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":187
  *             choice = dec_arr[i + gen*HH]
  *             for j in range(1,tot_states+1):
  *                 if state==j:             # <<<<<<<<<<<<<<
@@ -2812,7 +2842,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
                           __pyx_t_2 = ((__pyx_v_state == __pyx_v_j) != 0);
                           if (__pyx_t_2) {
 
-                            /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":188
+                            /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":188
  *             for j in range(1,tot_states+1):
  *                 if state==j:
  *                     sums[j-1] +=1             # <<<<<<<<<<<<<<
@@ -2822,18 +2852,18 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
                             __pyx_t_8 = (__pyx_v_j - 1);
                             (__pyx_v_sums[__pyx_t_8]) = ((__pyx_v_sums[__pyx_t_8]) + 1.0);
 
-                            /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":189
+                            /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":189
  *                 if state==j:
  *                     sums[j-1] +=1
  *                     for k in range(1,tot_decisions+1):             # <<<<<<<<<<<<<<
  *                         if choice==k:
  *                             counter[(k-1) + (j-1)*tot_decisions] +=1
  */
-                            __pyx_t_8 = (__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions + 1);
+                            __pyx_t_8 = (__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions + 1);
                             for (__pyx_t_9 = 1; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
                               __pyx_v_k = __pyx_t_9;
 
-                              /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":190
+                              /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":190
  *                     sums[j-1] +=1
  *                     for k in range(1,tot_decisions+1):
  *                         if choice==k:             # <<<<<<<<<<<<<<
@@ -2843,17 +2873,17 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
                               __pyx_t_2 = ((__pyx_v_choice == __pyx_v_k) != 0);
                               if (__pyx_t_2) {
 
-                                /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":191
+                                /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":191
  *                     for k in range(1,tot_decisions+1):
  *                         if choice==k:
  *                             counter[(k-1) + (j-1)*tot_decisions] +=1             # <<<<<<<<<<<<<<
  * 
  *         #fill in the CCP matrix with the estimates
  */
-                                __pyx_t_10 = ((__pyx_v_k - 1) + ((__pyx_v_j - 1) * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions));
+                                __pyx_t_10 = ((__pyx_v_k - 1) + ((__pyx_v_j - 1) * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions));
                                 (__pyx_v_counter[__pyx_t_10]) = ((__pyx_v_counter[__pyx_t_10]) + 1);
 
-                                /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":190
+                                /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":190
  *                     sums[j-1] +=1
  *                     for k in range(1,tot_decisions+1):
  *                         if choice==k:             # <<<<<<<<<<<<<<
@@ -2863,7 +2893,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
                               }
                             }
 
-                            /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":187
+                            /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":187
  *             choice = dec_arr[i + gen*HH]
  *             for j in range(1,tot_states+1):
  *                 if state==j:             # <<<<<<<<<<<<<<
@@ -2884,29 +2914,29 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
         #define unlikely(x) __builtin_expect(!!(x), 0)
     #endif
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":194
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":194
  * 
  *         #fill in the CCP matrix with the estimates
  *         for i in range(tot_states):             # <<<<<<<<<<<<<<
  *             for j in range(tot_states):
  *                 freq[j,i] = counter[j + i*tot_states]/sums[i]
  */
-    __pyx_t_5 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states;
+    __pyx_t_5 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states;
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v_i = __pyx_t_4;
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":195
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":195
  *         #fill in the CCP matrix with the estimates
  *         for i in range(tot_states):
  *             for j in range(tot_states):             # <<<<<<<<<<<<<<
  *                 freq[j,i] = counter[j + i*tot_states]/sums[i]
  *     finally:
  */
-      __pyx_t_3 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states;
+      __pyx_t_3 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states;
       for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_3; __pyx_t_6+=1) {
         __pyx_v_j = __pyx_t_6;
 
-        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":196
+        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":196
  *         for i in range(tot_states):
  *             for j in range(tot_states):
  *                 freq[j,i] = counter[j + i*tot_states]/sums[i]             # <<<<<<<<<<<<<<
@@ -2915,12 +2945,12 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
  */
         __pyx_t_11 = __pyx_v_j;
         __pyx_t_12 = __pyx_v_i;
-        *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_freq.data + __pyx_t_11 * __pyx_v_freq.strides[0]) ) + __pyx_t_12 * __pyx_v_freq.strides[1]) )) = (((double)(__pyx_v_counter[(__pyx_v_j + (__pyx_v_i * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states))])) / (__pyx_v_sums[__pyx_v_i]));
+        *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_freq.data + __pyx_t_11 * __pyx_v_freq.strides[0]) ) + __pyx_t_12 * __pyx_v_freq.strides[1]) )) = (((double)(__pyx_v_counter[(__pyx_v_j + (__pyx_v_i * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states))])) / (__pyx_v_sums[__pyx_v_i]));
       }
     }
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":198
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":198
  *                 freq[j,i] = counter[j + i*tot_states]/sums[i]
  *     finally:
  *         free(counter)             # <<<<<<<<<<<<<<
@@ -2931,7 +2961,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
     /*normal exit:*/{
       free(__pyx_v_counter);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":199
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":199
  *     finally:
  *         free(counter)
  *         free(sums)             # <<<<<<<<<<<<<<
@@ -2944,7 +2974,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
     __pyx_L8:;
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":165
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":165
  * 
  * #This function will calculate the empirical CCPs for whichever chosen generation
  * cdef void CCP(unsigned int* dec_arr, unsigned int* state_arr,             # <<<<<<<<<<<<<<
@@ -2955,7 +2985,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
   /* function exit code */
 }
 
-/* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":202
+/* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":202
  * 
  * ############ Function defining the simulation of the model ################
  * cpdef void Sim_Model(double[:] V, double alpha, double[:,:,:] wages,             # <<<<<<<<<<<<<<
@@ -2963,8 +2993,8 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(unsigne
  *                      double[:,:,:] tranny,
  */
 
-static PyObject *__pyx_pw_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_1Sim_Model(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(__Pyx_memviewslice __pyx_v_V, double __pyx_v_alpha, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_child, __Pyx_memviewslice __pyx_v_move, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_demos, __Pyx_memviewslice __pyx_v_dec_freq, __Pyx_memviewslice __pyx_v_states_freq, __Pyx_memviewslice __pyx_v_CCPs, __Pyx_memviewslice __pyx_v_init_states, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_1Sim_Model(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static void __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Sim_Model(__Pyx_memviewslice __pyx_v_V, double __pyx_v_alpha, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_child, __Pyx_memviewslice __pyx_v_move, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_demos, __Pyx_memviewslice __pyx_v_dec_freq, __Pyx_memviewslice __pyx_v_states_freq, __Pyx_memviewslice __pyx_v_CCPs, __Pyx_memviewslice __pyx_v_init_states, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_decision;
   Py_ssize_t __pyx_v_state;
   unsigned int *__pyx_v_decisions;
@@ -3005,7 +3035,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
   PyObject *__pyx_t_28 = NULL;
   PyObject *__pyx_t_29 = NULL;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":211
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":211
  *     global HH, Gen, tot_states, tot_decisions
  * 
  *     HH=demos[0]             # <<<<<<<<<<<<<<
@@ -3013,27 +3043,27 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
  *     tot_decisions=tranny.shape[1]    #Dimension of the decisions is diven by the rows of one of the trans arrays
  */
   __pyx_t_1 = 0;
-  __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH = (*((int *) ( /* dim=0 */ (__pyx_v_demos.data + __pyx_t_1 * __pyx_v_demos.strides[0]) )));
+  __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH = (*((int *) ( /* dim=0 */ (__pyx_v_demos.data + __pyx_t_1 * __pyx_v_demos.strides[0]) )));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":212
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":212
  * 
  *     HH=demos[0]
  *     tot_states=V.shape[0]            #Dimension of the states is given by the number of rows in the V array             # <<<<<<<<<<<<<<
  *     tot_decisions=tranny.shape[1]    #Dimension of the decisions is diven by the rows of one of the trans arrays
  *     Gen=demos[1]
  */
-  __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states = (__pyx_v_V.shape[0]);
+  __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states = (__pyx_v_V.shape[0]);
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":213
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":213
  *     HH=demos[0]
  *     tot_states=V.shape[0]            #Dimension of the states is given by the number of rows in the V array
  *     tot_decisions=tranny.shape[1]    #Dimension of the decisions is diven by the rows of one of the trans arrays             # <<<<<<<<<<<<<<
  *     Gen=demos[1]
  * 
  */
-  __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions = (__pyx_v_tranny.shape[1]);
+  __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions = (__pyx_v_tranny.shape[1]);
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":214
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":214
  *     tot_states=V.shape[0]            #Dimension of the states is given by the number of rows in the V array
  *     tot_decisions=tranny.shape[1]    #Dimension of the decisions is diven by the rows of one of the trans arrays
  *     Gen=demos[1]             # <<<<<<<<<<<<<<
@@ -3041,9 +3071,9 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
  *     #declare the types for variables and arrays
  */
   __pyx_t_2 = 1;
-  __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Gen = (*((int *) ( /* dim=0 */ (__pyx_v_demos.data + __pyx_t_2 * __pyx_v_demos.strides[0]) )));
+  __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Gen = (*((int *) ( /* dim=0 */ (__pyx_v_demos.data + __pyx_t_2 * __pyx_v_demos.strides[0]) )));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":218
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":218
  *     #declare the types for variables and arrays
  *     cdef:
  *         Py_ssize_t decision=0, state=0             # <<<<<<<<<<<<<<
@@ -3053,43 +3083,43 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
   __pyx_v_decision = 0;
   __pyx_v_state = 0;
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":233
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":233
  * 
  *     #allocate arrays
  *     decisions = <unsigned int*> calloc(HH*(Gen-1), sizeof(unsigned int))             # <<<<<<<<<<<<<<
  *     states = <unsigned int*> calloc(HH*Gen, sizeof(unsigned int))
  *     v_sim = <double*> calloc(HH*tot_states, sizeof(double))
  */
-  __pyx_v_decisions = ((unsigned int *)calloc((__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH * (__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Gen - 1)), (sizeof(unsigned int))));
+  __pyx_v_decisions = ((unsigned int *)calloc((__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH * (__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Gen - 1)), (sizeof(unsigned int))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":234
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":234
  *     #allocate arrays
  *     decisions = <unsigned int*> calloc(HH*(Gen-1), sizeof(unsigned int))
  *     states = <unsigned int*> calloc(HH*Gen, sizeof(unsigned int))             # <<<<<<<<<<<<<<
  *     v_sim = <double*> calloc(HH*tot_states, sizeof(double))
  *     shocks = <double*> malloc(HH*tot_states*(Gen-1) * sizeof(double))
  */
-  __pyx_v_states = ((unsigned int *)calloc((__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Gen), (sizeof(unsigned int))));
+  __pyx_v_states = ((unsigned int *)calloc((__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Gen), (sizeof(unsigned int))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":235
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":235
  *     decisions = <unsigned int*> calloc(HH*(Gen-1), sizeof(unsigned int))
  *     states = <unsigned int*> calloc(HH*Gen, sizeof(unsigned int))
  *     v_sim = <double*> calloc(HH*tot_states, sizeof(double))             # <<<<<<<<<<<<<<
  *     shocks = <double*> malloc(HH*tot_states*(Gen-1) * sizeof(double))
  *     r = gsl_rng_alloc (gsl_rng_mt19937) #use the MT19937 algorithm for prng
  */
-  __pyx_v_v_sim = ((double *)calloc((__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states), (sizeof(double))));
+  __pyx_v_v_sim = ((double *)calloc((__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states), (sizeof(double))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":236
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":236
  *     states = <unsigned int*> calloc(HH*Gen, sizeof(unsigned int))
  *     v_sim = <double*> calloc(HH*tot_states, sizeof(double))
  *     shocks = <double*> malloc(HH*tot_states*(Gen-1) * sizeof(double))             # <<<<<<<<<<<<<<
  *     r = gsl_rng_alloc (gsl_rng_mt19937) #use the MT19937 algorithm for prng
  * 
  */
-  __pyx_v_shocks = ((double *)malloc((((__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states) * (__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Gen - 1)) * (sizeof(double)))));
+  __pyx_v_shocks = ((double *)malloc((((__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states) * (__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Gen - 1)) * (sizeof(double)))));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":237
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":237
  *     v_sim = <double*> calloc(HH*tot_states, sizeof(double))
  *     shocks = <double*> malloc(HH*tot_states*(Gen-1) * sizeof(double))
  *     r = gsl_rng_alloc (gsl_rng_mt19937) #use the MT19937 algorithm for prng             # <<<<<<<<<<<<<<
@@ -3098,7 +3128,7 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
  */
   __pyx_v_r = gsl_rng_alloc(gsl_rng_mt19937);
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":240
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":240
  * 
  *     #check that memory was allocated:
  *     if not (decisions or states or v_sim or shocks or r): abort()             # <<<<<<<<<<<<<<
@@ -3137,16 +3167,16 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
     abort();
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":243
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":243
  * 
  *     #Fill in the shocks with the shock function
  *     FILL_shocks(r,shocks,HH*tot_states*(Gen-1))             # <<<<<<<<<<<<<<
  * 
  *     #simulate the model
  */
-  __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_FILL_shocks(__pyx_v_r, __pyx_v_shocks, ((__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states) * (__pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Gen - 1)));
+  __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_FILL_shocks(__pyx_v_r, __pyx_v_shocks, ((__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states) * (__pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Gen - 1)));
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":246
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":246
  * 
  *     #simulate the model
  *     try:             # <<<<<<<<<<<<<<
@@ -3155,14 +3185,14 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
  */
   /*try:*/ {
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":248
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":248
  *     try:
  *         #for initial generation, replace with random states generated from given distribution
  *         for j in prange(HH, schedule='dynamic', num_threads=8):             # <<<<<<<<<<<<<<
  *             states[j]=Next_State(init_states)
  * 
  */
-    __pyx_t_5 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH;
+    __pyx_t_5 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH;
     if (1 == 0) abort();
     {
         #if ((defined(__APPLE__) || defined(__OSX__)) && (defined(__GNUC__) && (__GNUC__ > 2 || (__GNUC__ == 2 && (__GNUC_MINOR__ > 95)))))
@@ -3185,14 +3215,14 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
                     {
                         __pyx_v_j = (Py_ssize_t)(0 + 1 * __pyx_t_6);
 
-                        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":249
+                        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":249
  *         #for initial generation, replace with random states generated from given distribution
  *         for j in prange(HH, schedule='dynamic', num_threads=8):
  *             states[j]=Next_State(init_states)             # <<<<<<<<<<<<<<
  * 
  *         #fill in the frequency of states of the first generation (gen 0)
  */
-                        (__pyx_v_states[__pyx_v_j]) = __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Next_State(__pyx_v_init_states);
+                        (__pyx_v_states[__pyx_v_j]) = __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Next_State(__pyx_v_init_states);
                     }
                 }
             }
@@ -3205,34 +3235,34 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
         #define unlikely(x) __builtin_expect(!!(x), 0)
     #endif
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":252
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":252
  * 
  *         #fill in the frequency of states of the first generation (gen 0)
  *         Frequencies(states, states_freq, 0, 0)             # <<<<<<<<<<<<<<
  * 
  *         #outerloop are the generations (make sure that we skip the last generation - they
  */
-    __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies(__pyx_v_states, __pyx_v_states_freq, 0, 0);
+    __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Frequencies(__pyx_v_states, __pyx_v_states_freq, 0, 0);
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":256
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":256
  *         #outerloop are the generations (make sure that we skip the last generation - they
  *         #make no decisions - so start iterator at 1 and not 0)
- *         for i in xrange(1,Gen):             # <<<<<<<<<<<<<<
+ *         for i in range(1,Gen):             # <<<<<<<<<<<<<<
  * 
  *             #inner loop the households (should be parallelizable)
  */
-    __pyx_t_7 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Gen;
+    __pyx_t_7 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Gen;
     for (__pyx_t_6 = 1; __pyx_t_6 < __pyx_t_7; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":259
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":259
  * 
  *             #inner loop the households (should be parallelizable)
  *             for j in prange(HH, schedule='dynamic', num_threads=8):             # <<<<<<<<<<<<<<
  * 
  *                 #grab the household's state from the matrix
  */
-      __pyx_t_5 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH;
+      __pyx_t_5 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH;
       if (1 == 0) abort();
       {
           Py_ssize_t __pyx_parallel_temp0 = 0xbad0bad0;
@@ -3274,27 +3304,27 @@ static void __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(_
                           __pyx_v_k = ((Py_ssize_t)0xbad0bad0);
                           __pyx_v_state = ((Py_ssize_t)0xbad0bad0);
 
-                          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":262
+                          /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":262
  * 
  *                 #grab the household's state from the matrix
  *                 state=states[j+(i-1)*HH]             # <<<<<<<<<<<<<<
  * 
  *                 for k in range(tot_decisions):
  */
-                          __pyx_v_state = (__pyx_v_states[(__pyx_v_j + ((__pyx_v_i - 1) * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH))]);
+                          __pyx_v_state = (__pyx_v_states[(__pyx_v_j + ((__pyx_v_i - 1) * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH))]);
 
-                          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":264
+                          /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":264
  *                 state=states[j+(i-1)*HH]
  * 
  *                 for k in range(tot_decisions):             # <<<<<<<<<<<<<<
  * 
  *                     #calculate choice specific value functions
  */
-                          __pyx_t_10 = __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions;
+                          __pyx_t_10 = __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions;
                           for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
                             __pyx_v_k = __pyx_t_11;
 
-                            /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":267
+                            /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":267
  * 
  *                     #calculate choice specific value functions
  *                     v_sim[k+j*tot_states] = wages[state-1,0,k] + child[state-1,0,k] + move[0,k] + alpha*dot(tranny[state-1,k,:],V) + shocks[k+(j+(i-1)*HH)*tot_decisions]             # <<<<<<<<<<<<<<
@@ -3354,31 +3384,31 @@ __pyx_t_20.shape[0] = __pyx_v_tranny.shape[2];
 __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
     __pyx_t_20.suboffsets[0] = -1;
 
-(__pyx_v_v_sim[(__pyx_v_k + (__pyx_v_j * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_states))]) = (((((*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_wages.data + __pyx_t_12 * __pyx_v_wages.strides[0]) ) + __pyx_t_13 * __pyx_v_wages.strides[1]) ) + __pyx_t_14 * __pyx_v_wages.strides[2]) ))) + (*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_child.data + __pyx_t_15 * __pyx_v_child.strides[0]) ) + __pyx_t_16 * __pyx_v_child.strides[1]) ) + __pyx_t_17 * __pyx_v_child.strides[2]) )))) + (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_move.data + __pyx_t_18 * __pyx_v_move.strides[0]) ) + __pyx_t_19 * __pyx_v_move.strides[1]) )))) + (__pyx_v_alpha * __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_dot(__pyx_t_20, __pyx_v_V))) + (__pyx_v_shocks[(__pyx_v_k + ((__pyx_v_j + ((__pyx_v_i - 1) * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH)) * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_tot_decisions))]));
+(__pyx_v_v_sim[(__pyx_v_k + (__pyx_v_j * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_states))]) = (((((*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_wages.data + __pyx_t_12 * __pyx_v_wages.strides[0]) ) + __pyx_t_13 * __pyx_v_wages.strides[1]) ) + __pyx_t_14 * __pyx_v_wages.strides[2]) ))) + (*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_child.data + __pyx_t_15 * __pyx_v_child.strides[0]) ) + __pyx_t_16 * __pyx_v_child.strides[1]) ) + __pyx_t_17 * __pyx_v_child.strides[2]) )))) + (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_move.data + __pyx_t_18 * __pyx_v_move.strides[0]) ) + __pyx_t_19 * __pyx_v_move.strides[1]) )))) + (__pyx_v_alpha * __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_dot(__pyx_t_20, __pyx_v_V))) + (__pyx_v_shocks[(__pyx_v_k + ((__pyx_v_j + ((__pyx_v_i - 1) * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH)) * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_tot_decisions))]));
                             __PYX_XDEC_MEMVIEW(&__pyx_t_20, 0);
                             __pyx_t_20.memview = NULL;
                             __pyx_t_20.data = NULL;
                           }
 
-                          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":270
+                          /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":270
  * 
  *                 #compare values, return the decision (index+1)
  *                 decision=Compare(v_sim,j)             # <<<<<<<<<<<<<<
  *                 decisions[j+(i-1)*HH]=<unsigned int>decision
  * 
  */
-                          __pyx_v_decision = __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Compare(__pyx_v_v_sim, __pyx_v_j);
+                          __pyx_v_decision = __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Compare(__pyx_v_v_sim, __pyx_v_j);
 
-                          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":271
+                          /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":271
  *                 #compare values, return the decision (index+1)
  *                 decision=Compare(v_sim,j)
  *                 decisions[j+(i-1)*HH]=<unsigned int>decision             # <<<<<<<<<<<<<<
  * 
  *                 #the next generations state (make sure we don't attempt to write (Gen+1):
  */
-                          (__pyx_v_decisions[(__pyx_v_j + ((__pyx_v_i - 1) * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH))]) = ((unsigned int)__pyx_v_decision);
+                          (__pyx_v_decisions[(__pyx_v_j + ((__pyx_v_i - 1) * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH))]) = ((unsigned int)__pyx_v_decision);
 
-                          /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":274
+                          /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":274
  * 
  *                 #the next generations state (make sure we don't attempt to write (Gen+1):
  *                 states[j+i*HH]=Next_State(tranny[state-1,decision-1,:])             # <<<<<<<<<<<<<<
@@ -3430,7 +3460,7 @@ __pyx_t_20.shape[0] = __pyx_v_tranny.shape[2];
 __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
     __pyx_t_20.suboffsets[0] = -1;
 
-(__pyx_v_states[(__pyx_v_j + (__pyx_v_i * __pyx_v_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_HH))]) = __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Next_State(__pyx_t_20);
+(__pyx_v_states[(__pyx_v_j + (__pyx_v_i * __pyx_v_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_HH))]) = __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Next_State(__pyx_t_20);
                           __PYX_XDEC_MEMVIEW(&__pyx_t_20, 0);
                           __pyx_t_20.memview = NULL;
                           __pyx_t_20.data = NULL;
@@ -3456,7 +3486,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
                           goto __pyx_L26;
                           __pyx_L26:;
                           #ifdef _OPENMP
-                          #pragma omp critical(__pyx_parallel_lastprivates7)
+                          #pragma omp critical(__pyx_parallel_lastprivates0)
                           #endif /* _OPENMP */
                           {
                               __pyx_parallel_temp0 = __pyx_v_decision;
@@ -3521,36 +3551,36 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
           #define unlikely(x) __builtin_expect(!!(x), 0)
       #endif
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":277
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":277
  * 
  *             #calculate the frequencies of decisions taken and of the next states
  *             Frequencies(decisions, dec_freq, (i-1), 1)             # <<<<<<<<<<<<<<
  *             Frequencies(states, states_freq, i, 0)
  * 
  */
-      __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies(__pyx_v_decisions, __pyx_v_dec_freq, (__pyx_v_i - 1), 1);
+      __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Frequencies(__pyx_v_decisions, __pyx_v_dec_freq, (__pyx_v_i - 1), 1);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":278
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":278
  *             #calculate the frequencies of decisions taken and of the next states
  *             Frequencies(decisions, dec_freq, (i-1), 1)
  *             Frequencies(states, states_freq, i, 0)             # <<<<<<<<<<<<<<
  * 
  *         #fill the CCP array (last generation to make decisions - array block Gen-2)
  */
-      __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Frequencies(__pyx_v_states, __pyx_v_states_freq, __pyx_v_i, 0);
+      __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Frequencies(__pyx_v_states, __pyx_v_states_freq, __pyx_v_i, 0);
     }
 
-    /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":281
+    /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":281
  * 
  *         #fill the CCP array (last generation to make decisions - array block Gen-2)
  *         CCP(decisions, states, 0, CCPs)             # <<<<<<<<<<<<<<
  * 
  *     finally:
  */
-    __pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_CCP(__pyx_v_decisions, __pyx_v_states, 0, __pyx_v_CCPs);
+    __pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_CCP(__pyx_v_decisions, __pyx_v_states, 0, __pyx_v_CCPs);
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":284
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":284
  * 
  *     finally:
  *         free(decisions)             # <<<<<<<<<<<<<<
@@ -3561,7 +3591,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
     /*normal exit:*/{
       free(__pyx_v_decisions);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":285
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":285
  *     finally:
  *         free(decisions)
  *         free(v_sim)             # <<<<<<<<<<<<<<
@@ -3570,7 +3600,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
  */
       free(__pyx_v_v_sim);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":286
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":286
  *         free(decisions)
  *         free(v_sim)
  *         free(states)             # <<<<<<<<<<<<<<
@@ -3579,7 +3609,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
  */
       free(__pyx_v_states);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":287
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":287
  *         free(v_sim)
  *         free(states)
  *         free(shocks)             # <<<<<<<<<<<<<<
@@ -3587,7 +3617,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
  */
       free(__pyx_v_shocks);
 
-      /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":288
+      /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":288
  *         free(states)
  *         free(shocks)
  *         gsl_rng_free(r)             # <<<<<<<<<<<<<<
@@ -3621,7 +3651,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
       #endif
       {
 
-        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":284
+        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":284
  * 
  *     finally:
  *         free(decisions)             # <<<<<<<<<<<<<<
@@ -3630,7 +3660,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
  */
         free(__pyx_v_decisions);
 
-        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":285
+        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":285
  *     finally:
  *         free(decisions)
  *         free(v_sim)             # <<<<<<<<<<<<<<
@@ -3639,7 +3669,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
  */
         free(__pyx_v_v_sim);
 
-        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":286
+        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":286
  *         free(decisions)
  *         free(v_sim)
  *         free(states)             # <<<<<<<<<<<<<<
@@ -3648,7 +3678,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
  */
         free(__pyx_v_states);
 
-        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":287
+        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":287
  *         free(v_sim)
  *         free(states)
  *         free(shocks)             # <<<<<<<<<<<<<<
@@ -3656,7 +3686,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
  */
         free(__pyx_v_shocks);
 
-        /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":288
+        /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":288
  *         free(states)
  *         free(shocks)
  *         gsl_rng_free(r)             # <<<<<<<<<<<<<<
@@ -3687,7 +3717,7 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
     __pyx_L11:;
   }
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":202
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":202
  * 
  * ############ Function defining the simulation of the model ################
  * cpdef void Sim_Model(double[:] V, double alpha, double[:,:,:] wages,             # <<<<<<<<<<<<<<
@@ -3699,13 +3729,13 @@ __pyx_t_20.strides[0] = __pyx_v_tranny.strides[2];
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XDEC_MEMVIEW(&__pyx_t_20, 0);
-  __Pyx_WriteUnraisable("_cython_magic_7a80b2ab25bc8891afbc568964d71b88.Sim_Model", __pyx_clineno, __pyx_lineno, __pyx_filename, 0, 1);
+  __Pyx_WriteUnraisable("_cython_magic_fdbf59c57a329acab7ca8c02424134dd.Sim_Model", __pyx_clineno, __pyx_lineno, __pyx_filename, 0, 1);
   __pyx_L0:;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_1Sim_Model(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_1Sim_Model(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_1Sim_Model(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_1Sim_Model(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_V = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_v_alpha;
   __Pyx_memviewslice __pyx_v_wages = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -3831,18 +3861,18 @@ static PyObject *__pyx_pw_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_1Sim_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("Sim_Model", 1, 11, 11, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 202, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("_cython_magic_7a80b2ab25bc8891afbc568964d71b88.Sim_Model", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_cython_magic_fdbf59c57a329acab7ca8c02424134dd.Sim_Model", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(__pyx_self, __pyx_v_V, __pyx_v_alpha, __pyx_v_wages, __pyx_v_child, __pyx_v_move, __pyx_v_tranny, __pyx_v_demos, __pyx_v_dec_freq, __pyx_v_states_freq, __pyx_v_CCPs, __pyx_v_init_states);
+  __pyx_r = __pyx_pf_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Sim_Model(__pyx_self, __pyx_v_V, __pyx_v_alpha, __pyx_v_wages, __pyx_v_child, __pyx_v_move, __pyx_v_tranny, __pyx_v_demos, __pyx_v_dec_freq, __pyx_v_states_freq, __pyx_v_CCPs, __pyx_v_init_states);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_V, double __pyx_v_alpha, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_child, __Pyx_memviewslice __pyx_v_move, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_demos, __Pyx_memviewslice __pyx_v_dec_freq, __Pyx_memviewslice __pyx_v_states_freq, __Pyx_memviewslice __pyx_v_CCPs, __Pyx_memviewslice __pyx_v_init_states) {
+static PyObject *__pyx_pf_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Sim_Model(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_V, double __pyx_v_alpha, __Pyx_memviewslice __pyx_v_wages, __Pyx_memviewslice __pyx_v_child, __Pyx_memviewslice __pyx_v_move, __Pyx_memviewslice __pyx_v_tranny, __Pyx_memviewslice __pyx_v_demos, __Pyx_memviewslice __pyx_v_dec_freq, __Pyx_memviewslice __pyx_v_states_freq, __Pyx_memviewslice __pyx_v_CCPs, __Pyx_memviewslice __pyx_v_init_states) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3858,7 +3888,7 @@ static PyObject *__pyx_pf_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_M
   if (unlikely(!__pyx_v_states_freq.memview)) { __Pyx_RaiseUnboundLocalError("states_freq"); __PYX_ERR(0, 202, __pyx_L1_error) }
   if (unlikely(!__pyx_v_CCPs.memview)) { __Pyx_RaiseUnboundLocalError("CCPs"); __PYX_ERR(0, 202, __pyx_L1_error) }
   if (unlikely(!__pyx_v_init_states.memview)) { __Pyx_RaiseUnboundLocalError("init_states"); __PYX_ERR(0, 202, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_void_to_None(__pyx_f_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_Model(__pyx_v_V, __pyx_v_alpha, __pyx_v_wages, __pyx_v_child, __pyx_v_move, __pyx_v_tranny, __pyx_v_demos, __pyx_v_dec_freq, __pyx_v_states_freq, __pyx_v_CCPs, __pyx_v_init_states, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_void_to_None(__pyx_f_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_Sim_Model(__pyx_v_V, __pyx_v_alpha, __pyx_v_wages, __pyx_v_child, __pyx_v_move, __pyx_v_tranny, __pyx_v_demos, __pyx_v_dec_freq, __pyx_v_states_freq, __pyx_v_CCPs, __pyx_v_init_states, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3867,7 +3897,7 @@ static PyObject *__pyx_pf_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_Sim_M
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("_cython_magic_7a80b2ab25bc8891afbc568964d71b88.Sim_Model", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_cython_magic_fdbf59c57a329acab7ca8c02424134dd.Sim_Model", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_V, 1);
@@ -15661,7 +15691,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.array", /*tp_name*/
+  "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -15767,7 +15797,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.Enum", /*tp_name*/
+  "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -16015,7 +16045,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.memoryview", /*tp_name*/
+  "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -16140,7 +16170,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "_cython_magic_7a80b2ab25bc8891afbc568964d71b88._memoryviewslice", /*tp_name*/
+  "_cython_magic_fdbf59c57a329acab7ca8c02424134dd._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -16205,7 +16235,7 @@ static PyTypeObject __pyx_type___pyx_memoryviewslice = {
 };
 
 static PyMethodDef __pyx_methods[] = {
-  {"Sim_Model", (PyCFunction)__pyx_pw_46_cython_magic_7a80b2ab25bc8891afbc568964d71b88_1Sim_Model, METH_VARARGS|METH_KEYWORDS, 0},
+  {"Sim_Model", (PyCFunction)__pyx_pw_46_cython_magic_fdbf59c57a329acab7ca8c02424134dd_1Sim_Model, METH_VARARGS|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
@@ -16216,7 +16246,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "_cython_magic_7a80b2ab25bc8891afbc568964d71b88",
+    "_cython_magic_fdbf59c57a329acab7ca8c02424134dd",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -16301,16 +16331,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_unable_to_allocate_shape_and_str, __pyx_k_unable_to_allocate_shape_and_str, sizeof(__pyx_k_unable_to_allocate_shape_and_str), 0, 0, 1, 0},
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
   {&__pyx_n_s_wages, __pyx_k_wages, sizeof(__pyx_k_wages), 0, 0, 1, 1},
-  {&__pyx_n_s_xrange, __pyx_k_xrange, sizeof(__pyx_k_xrange), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 44, __pyx_L1_error)
-  #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 44, __pyx_L1_error)
-  #endif
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 44, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 131, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 146, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 149, __pyx_L1_error)
@@ -16552,11 +16576,11 @@ if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 2, __pyx_L1_error)
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC init_cython_magic_7a80b2ab25bc8891afbc568964d71b88(void); /*proto*/
-PyMODINIT_FUNC init_cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
+PyMODINIT_FUNC init_cython_magic_fdbf59c57a329acab7ca8c02424134dd(void); /*proto*/
+PyMODINIT_FUNC init_cython_magic_fdbf59c57a329acab7ca8c02424134dd(void)
 #else
-PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void); /*proto*/
-PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
+PyMODINIT_FUNC PyInit__cython_magic_fdbf59c57a329acab7ca8c02424134dd(void); /*proto*/
+PyMODINIT_FUNC PyInit__cython_magic_fdbf59c57a329acab7ca8c02424134dd(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -16571,7 +16595,7 @@ PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__cython_magic_fdbf59c57a329acab7ca8c02424134dd(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 2, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 2, __pyx_L1_error)
@@ -16600,7 +16624,7 @@ PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("_cython_magic_7a80b2ab25bc8891afbc568964d71b88", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("_cython_magic_fdbf59c57a329acab7ca8c02424134dd", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -16617,14 +16641,14 @@ PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main__cython_magic_7a80b2ab25bc8891afbc568964d71b88) {
+  if (__pyx_module_is_main__cython_magic_fdbf59c57a329acab7ca8c02424134dd) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 2, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "_cython_magic_7a80b2ab25bc8891afbc568964d71b88")) {
-      if (unlikely(PyDict_SetItemString(modules, "_cython_magic_7a80b2ab25bc8891afbc568964d71b88", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "_cython_magic_fdbf59c57a329acab7ca8c02424134dd")) {
+      if (unlikely(PyDict_SetItemString(modules, "_cython_magic_fdbf59c57a329acab7ca8c02424134dd", __pyx_m) < 0)) __PYX_ERR(0, 2, __pyx_L1_error)
     }
   }
   #endif
@@ -16679,7 +16703,7 @@ PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   #endif
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":82
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":82
  * 
  * #This function rewrites array with the cumulative sum through recursion
  * cdef void cum_sum(double *arr, size_t index=4-1) nogil:             # <<<<<<<<<<<<<<
@@ -16688,9 +16712,9 @@ PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
  */
   __pyx_k_ = (4 - 1);
 
-  /* "_cython_magic_7a80b2ab25bc8891afbc568964d71b88.pyx":2
+  /* "_cython_magic_fdbf59c57a329acab7ca8c02424134dd.pyx":2
  * 
- * # Cython code to optimise in C the solution of the model portion of the code             # <<<<<<<<<<<<<<
+ * # Cython code to optimise in C the Simulation of the model portion of the code             # <<<<<<<<<<<<<<
  * 
  * ##################### Import Modules and math functions ######################
  */
@@ -16849,11 +16873,11 @@ PyMODINIT_FUNC PyInit__cython_magic_7a80b2ab25bc8891afbc568964d71b88(void)
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init _cython_magic_7a80b2ab25bc8891afbc568964d71b88", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init _cython_magic_fdbf59c57a329acab7ca8c02424134dd", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init _cython_magic_7a80b2ab25bc8891afbc568964d71b88");
+    PyErr_SetString(PyExc_ImportError, "init _cython_magic_fdbf59c57a329acab7ca8c02424134dd");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

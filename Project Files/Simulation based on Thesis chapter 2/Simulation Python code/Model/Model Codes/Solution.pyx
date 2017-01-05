@@ -111,13 +111,13 @@ cpdef void Modelo(double[:] param, double[:,:,:] wages, double[:,:,:] c_wages,
             V_model[j]=rand_val()
         
         #run the model loop
-        for j in xrange(1,iteration):
+        for j in range(1,iteration):
     
-            for k in xrange(tot_states):            # iterate over the states (the third dimension)
+            for k in range(tot_states):            # iterate over the states (the third dimension)
 
                 total=0
             
-                for l in xrange(tot_decisions):     # iterate over each decision to fill in the v matrix
+                for l in range(tot_decisions):     # iterate over each decision to fill in the v matrix
 
                     v_temp=wages[k,0,l] + c_wages[k,0,l] + mover[0,l] + alpha*dot(tranny[k,l,:],V_model)
                    
@@ -138,14 +138,14 @@ cpdef void Modelo(double[:] param, double[:,:,:] wages, double[:,:,:] c_wages,
             #convergence:
             if check < tol:
                 #copy elements from iteration to the output arrays
-                for k in xrange(tot_states):
+                for k in range(tot_states):
                     V[k] = V_model[k + tot_states]
                     for l in range(tot_decisions):
                         CCP[l,k] = exp(v[l+k*tot_decisions])/sums[k]
                 break
             #move the first column in V_model to the zeroeth column for next iteration
             else:
-                for k in xrange(tot_states):
+                for k in range(tot_states):
                     V_model[k]=V_model[k+tot_states]
                 
     finally:
