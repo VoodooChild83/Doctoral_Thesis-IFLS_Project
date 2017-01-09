@@ -39,9 +39,11 @@ cdef inline double rand_value() nogil:
     return rand()/<double>RAND_MAX
 
 #This function will fill the allocated memory with the shocks from the GE-3 gumbel                        
-cdef void FILL_shocks(gsl_rng* r, double* arr, Py_ssize_t iter) nogil:
+cdef void FILL_shocks(gsl_rng* r, double* arr, Py_ssize_t Iter) nogil:
     cdef Py_ssize_t i
-    for i in range(iter):
+    for i in range(Iter):
+        #gsl_ran_gumbel1(algorithm array, a=scale, b=location)
+        #set a=1,b=1 for the gumbel type 1 distribution to -> GE type 3 dist.
         arr[i]=gsl_ran_gumbel1(r,1,1)
 
 ############# Choice Specific Values assisting functions
@@ -234,7 +236,7 @@ cpdef void Sim_Model(double[:] V, double alpha, double[:,:,:] wages,
     states = <unsigned int*> calloc(HH*Gen, sizeof(unsigned int))
     v_sim = <double*> calloc(HH*tot_states, sizeof(double))
     shocks = <double*> malloc(HH*tot_states*(Gen-1) * sizeof(double))
-    r = gsl_rng_alloc (gsl_rng_mt19937) #use the MT19937 algorithm for prng
+    r = gsl_rng_alloc (gsl_rng_mt19937) #use the MT19937 algorithm for p-rng
         
     #check that memory was allocated:
     if not (decisions or states or v_sim or shocks or r): abort()
