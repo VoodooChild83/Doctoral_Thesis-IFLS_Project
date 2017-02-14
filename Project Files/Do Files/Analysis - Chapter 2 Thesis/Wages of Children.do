@@ -19,7 +19,7 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 		
 		drop if pidlink2==.
 		
-		drop if age<15
+		drop if age<10
 	
 	* Create the 5 different markets
 	
@@ -29,7 +29,7 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 			replace Market= 3 if (provmov>=51 & provmov<=53)
 			replace Market= 4 if (provmov>=61 & provmov<=65)|provmov==21
 			replace Market= 5 if (provmov>=71 & provmov<=76)
-			replace Market= 5 if (provmov>=81 & provmov<=94)
+			replace Market= 6 if (provmov>=81 & provmov<=94)
 			
 			
 	* Create Provincial and Intraprovincial migration events

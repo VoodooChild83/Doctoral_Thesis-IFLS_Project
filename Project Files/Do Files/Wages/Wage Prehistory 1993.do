@@ -188,9 +188,11 @@ gen hrs_wk=tk53
 
 rename (hhid93 pid93 occ52) (hhid1993 pid1993 occ2)
 
-keep pidlink occ2 year flag_FirstJobInconsis hrs_* *_yr *_hr *_mth  worked FirstJob
+gen unpaid=1 if tk55==6
 
-order pidlink year occ2 flag_* worked hrs_* wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_hr ln_wage_mth ln_wage_yr FirstJob
+keep pidlink occ2 year flag_FirstJobInconsis hrs_* *_yr *_hr *_mth  worked FirstJob unpaid
+
+order pidlink year unpaid occ2 flag_* worked hrs_* wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_hr ln_wage_mth ln_wage_yr FirstJob
 
 ********************************************************************************
 // Fill in missing occupation codes

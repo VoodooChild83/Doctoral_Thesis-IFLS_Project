@@ -15,6 +15,8 @@ gen year=tk07
 
 drop if tk01==1  // Drop those who are still working
 
+gen unpaid=1 if tk15==6
+
 gen stopped_1987=1 if tk06a==1
 gen stopped_1992=1 if tk06b==1
 
@@ -55,9 +57,9 @@ drop PPP wage_mth
 ********************************************************************************
 // Keep the desired variables
 
-keep  pidlink year r_wage_mth stopped_wrk retired neverwrkd stopped_1987 stopped_1992
+keep  pidlink year r_wage_mth stopped_wrk retired neverwrkd stopped_1987 stopped_1992 unpaid
 	
-order pidlink year stopped_1987 stopped_1992 stopped_wrk retired neverwrkd r_wage_mth 
+order pidlink year unpaid stopped_1987 stopped_1992 stopped_wrk retired neverwrkd r_wage_mth 
 	
 gen dataset="3"
 

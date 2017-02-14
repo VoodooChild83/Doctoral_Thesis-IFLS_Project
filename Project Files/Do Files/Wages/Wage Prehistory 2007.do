@@ -101,9 +101,11 @@ rename (tk53 tk54) (hrs_wk wks_yr)
 
 rename (occ2007) (occ2)
 
-keep pidlink occ2 year hrs_* *_yr *_hr *_mth  worked FirstJob
+gen unpaid=1 if tk55==6
 
-order pidlink year occ2 worked hrs_* wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_hr ln_wage_mth ln_wage_yr FirstJob
+keep pidlink occ2 year hrs_* *_yr *_hr *_mth  worked FirstJob unpaid
+
+order pidlink year unpaid occ2 worked hrs_* wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_hr ln_wage_mth ln_wage_yr FirstJob
 
 ********************************************************************************
 // Save the file

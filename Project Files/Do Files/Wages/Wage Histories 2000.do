@@ -16,7 +16,9 @@ preserve
 
 rename (tk28yr tk32b tk34 tk35n tk35g tk36 tk37) (year occ2 wage_mth_1 wage_mth_2 wage_mth_3 hrs_wk wks_yr)
 
-keep pidlink year occ2 wage_mth_* hrs_wk wks_yr
+gen unpaid=1 if tk33==6
+
+keep pidlink year occ2 wage_mth_* hrs_wk wks_yr unpaid
 
 ********************************************************************************
 // Cross-check that the three monthly wages are "exclusive"
@@ -82,7 +84,7 @@ replace wks_yr=. if wks_yr>52
 	
 * Generate if worked
 
-	gen worked=1 if r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="")	
+	gen worked=1 if ( r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") |(hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") |(hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") |(hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="") | unpaid==1)
 	
 save "$maindir$tmp/2000 Wage History Occup 1.dta",replace
 
@@ -96,7 +98,9 @@ restore
 
 rename (hhid00 pid00 tk28yr tk42b tk44 tk45n tk45g tk46 tk47) (hhid2000 pid2000 year occ2 wage_mth_1 wage_mth_2 wage_mth_3 hrs_wk wks_yr)
 
-keep pidlink year occ2 wage_mth_* hrs_wk wks_yr
+gen unpaid=1 if tk43==6
+
+keep pidlink year occ2 wage_mth_* hrs_wk wks_yr unpaid
 
 ********************************************************************************
 // Cross-check that the three monthly wages are "exclusive"
@@ -162,7 +166,7 @@ replace wks_yr=. if wks_yr>52
 	
 * Generate if worked
 
-	gen worked=1 if r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="")	
+	gen worked=1 if ( r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") |(hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="") | unpaid==1	)
 	
 	keep if worked==1
 	

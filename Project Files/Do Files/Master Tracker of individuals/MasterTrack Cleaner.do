@@ -12,26 +12,29 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 
 ********************************************************************************
 
-use "$maindir$wave_4/ptrack.dta", clear
+use "$maindir$wave_5/ptrack.dta", clear
 
 drop *98* ar02_07
 
 * Clean person weights in seperate file
 preserve
-qui do "$maindir$project$Do/Master Track Cleaner - Person Weights.do"
+qui do "$maindir$project$Do/Master Tracker of individuals/Master Track Cleaner - Person Weights.do"
 restore
 
 * keep only desired variables
-keep pidlink hhid* pid* sex ar01a* ar02* member* mresp msrd* cov8b5 bth_year age_*
-
+keep pidlink hhid* pid* sex ar01a* ar02* member* mainresp* msured93970007 cov8b5 bth_year age_*
+drop hhid14_* ar02_14
 * Merge in the person weights
+
+*three multiple pidlinks.....drop one of the duplicates
+bys pidlink: drop if _n>1
 
 merge 1:1 pidlink using "$maindir$tmp/Person Longitudinal Weights.dta", nogen
 erase "$maindir$tmp/Person Longitudinal Weights.dta"
 
 // 1) Order the data to collect values that are necessary
 
-order pidlink hhid07 pid07 hhid00 pid00 hhid97 pid97 hhid93 pid93 sex ar01a_07 ar02b_07 ar01a_00 ar02b_00 ar01a_97 ar02_97 ar02_93 member07 member00 member97 member93
+order pidlink hhid14 pid14 hhid07 pid07 hhid00 pid00 hhid97 pid97 hhid93 pid93 sex ar01a_14 ar02b_14 ar01a_07 ar02b_07 ar01a_00 ar02b_00 ar01a_97 ar02_97 ar02_93 member14 member07 member00 member97 member93
 
 // label all variables from the codebook labels. Define Labels
 
@@ -88,17 +91,17 @@ label define measured 0 "No = Not Measured" 1 "Yes = Measured";
 
 label values sex male
 
-label values ar01a_97 ar01a_00 ar01a_07 liveinhh
+label values ar01a_14 ar01a_97 ar01a_00 ar01a_07 liveinhh
 
-label values ar02b_07 ar02b_00 ar02_97 ar02_93 relation
+label values ar02b_14 ar02b_07 ar02b_00 ar02_97 ar02_93 relation
 
-label values member93 member97 member00 member07 resident
+label values member14 member93 member97 member00 member07 resident
 
 label values cov8b5 childrelation
 
-label values mresp07 mainresp
+label values mainresp07 mainresp
 
-label values msrd07 measured
+label values msured93970007 measured
 
 *save "$maindir$project/MasterTrack.dta", replace
 ********************************************************************************
@@ -107,6 +110,7 @@ label values msrd07 measured
 
 // Open all relevant files first
 preserve
+use "$maindir$wave_5/bk_sc1.dta", clear
 use "$maindir$wave_4/bk_sc.dta", clear
 use "$maindir$wave_3/bk_sc.dta", clear
 use "$maindir$wave_2/hh97bk/bk_sc.dta", clear
@@ -114,46 +118,40 @@ drop version
 save "$maindir$tmp/bk_sc_97.dta"
 use "$maindir$wave_1/bukksc1.dta", clear
 restore
-// Return to the master dataset
-*use "$maindir$project/MasterTrack.dta"
+
 
 // Note: for this variable (sc05) coming from the sc module the unique identifier is the hhid of the wave year since this is a household level observation
 
+// Merge Fifth Wave
+merge m:1 hhid14 using "$maindir$wave_5/bk_sc1.dta", keepusing(sc05 sc01* sc02* sc03*) keep(1 3) nogen
+
+rename (sc05 sc01_14_14 sc02_14_14 sc03_14_14) (sc05_14 sc01_14 sc02_14 sc03_14)
+label variable sc05_14 "Urban/Rural (2014)"
+
+
 // Merge Fourth Wave
-merge m:1 hhid07 using "$maindir$wave_4/bk_sc.dta", keepusing(sc05 sc010707 sc020707 sc030707)
+merge m:1 hhid07 using "$maindir$wave_4/bk_sc.dta", keepusing(sc05 sc010707 sc020707 sc030707) keep(1 3) nogen
 
 rename (sc05 sc010707 sc020707 sc030707) (sc05_07 sc01_07 sc02_07 sc03_07)
 label variable sc05_07 "Urban/Rural (2007)"
-
-drop if _merge==2
-
-drop _merge
 
 *save "$maindir$project/MasterTrack.dta", replace
 
 
 // Merge Third Wave
-merge m:1 hhid00 using "$maindir$wave_3/bk_sc.dta", keepusing(sc01 sc02 sc03 sc05)
+merge m:1 hhid00 using "$maindir$wave_3/bk_sc.dta", keepusing(sc01 sc02 sc03 sc05) keep(1 3) nogen
 
 rename (sc01 sc02 sc03 sc05) (sc01_00 sc02_00 sc03_00 sc05_00)
 label variable sc05_00 "Urban/Rural (2000)"
-
-drop if _merge==2
-
-drop _merge
 
 *save "$maindir$project/MasterTrack.dta", replace
 
 
 // Merge Second Wave
-merge m:1 hhid97 using "$maindir$tmp/bk_sc_97.dta", keepusing(sc01 sc02 sc03 sc05)
+merge m:1 hhid97 using "$maindir$tmp/bk_sc_97.dta", keepusing(sc01 sc02 sc03 sc05) keep(1 3) nogen
 
 rename (sc01 sc02 sc03 sc05) (sc01_97 sc02_97 sc03_97 sc05_97)
 label variable sc05_97 "Urban/Rural (2000)"
-
-drop if _merge==2
-
-drop _merge
 
 *save "$maindir$project/MasterTrack.dta", replace
 
@@ -161,16 +159,12 @@ erase "$maindir$tmp/bk_sc_97.dta"
 
 
 //Merge First Wave
-merge m:1 hhid93 using "$maindir$wave_1/bukksc1.dta", keepusing(sc01 sc02 sc03 sc05)
+merge m:1 hhid93 using "$maindir$wave_1/bukksc1.dta", keepusing(sc01 sc02 sc03 sc05) keep(1 3) nogen
 
 rename (sc01 sc02 sc03 sc05) (sc01_93 sc02_93 sc03_93 sc05_93)
 label variable sc05_93 "Urban/Rural (2000)"
 
-drop if _merge==2
-
-drop _merge
-
-label values sc05_07 sc05_00 sc05_93 sc05_97
+label values sc05_07 sc05_00 sc05_93 sc05_97 sc05_14
 
 *save "$maindir$project/MasterTrack.dta", replace
 
@@ -181,6 +175,8 @@ label values sc05_07 sc05_00 sc05_93 sc05_97
 
 // First, rename variable to generate common suffixes related to wave years
 
+rename hhid14 hhid2014
+rename pid14 pid2014
 rename hhid07 hhid2007
 rename pid07 pid2007
 rename hhid00 hhid2000
@@ -189,6 +185,8 @@ rename hhid97 hhid1997
 rename pid97 pid1997
 rename hhid93 hhid1993
 rename pid93 pid1993
+rename ar01a_14 ar01a2014
+rename ar02b_14 ar02b2014
 rename ar01a_07 ar01a2007
 rename ar02b_07 ar02b2007
 rename ar01a_00 ar01a2000
@@ -196,10 +194,12 @@ rename ar02b_00 ar02b2000
 rename ar01a_97 ar01a1997
 rename ar02_97 ar02b1997
 rename ar02_93 ar02b1993
+rename member14 member2014
 rename member07 member2007
 rename member00 member2000
 rename member97 member1997
 rename member93 member1993
+rename sc05_14 sc052014
 rename sc05_07 sc052007
 rename sc05_00 sc052000
 rename sc05_97 sc051997
@@ -216,10 +216,14 @@ rename sc03_00 kecmov2000
 rename sc01_07 provmov2007
 rename sc02_07 kabmov2007
 rename sc03_07 kecmov2007
+rename sc01_14 provmov2014
+rename sc02_14 kabmov2014
+rename sc03_14 kecmov2014
 rename age_00 age2000
 rename age_93 age1993
 rename age_97 age1997
 rename age_07 age2007
+rename age_14 age2014
 
 
 ********************************************************************************
@@ -234,6 +238,7 @@ use "$maindir$wave_1/bukkar2.dta", clear
 
 rename hhid93 hhid1993
 rename pid93 pid1993
+rename ar18 ar18c
 
 foreach x in ar10 ar11 ar12 ar13 ar14 ar15 ar16 ar17 ar18c {
 
@@ -286,19 +291,34 @@ foreach x in ar18h ar10 ar11 ar12 ar13 ar14 ar15 ar15d ar16 ar17 ar18c ar18eyr a
 
 save "$maindir$tmp/bk_ar1_2007.dta", replace
 
+// 2014 wave
+
+use "$maindir$wave_5/bk_ar1.dta", clear
+
+// rewrite key variables by wave years to facilitate merging in long format
+
+rename hhid14 hhid2014
+rename pid14 pid2014
+
+foreach x in ar18h ar10 ar11 ar12 ar13 ar14 ar15 ar15d ar16 ar17 ar18c ar18eyr ar18f ar18i{
+
+		rename `x' `x'2014
+		}
+		
+
+save "$maindir$tmp/bk_ar1_2014.dta", replace
+
 restore
 
 // Merge Education and other Familial Identifiers from the previous temp files
 
-foreach year in 1993 1997 2000 2007{
+foreach year in 1993 1997 2000 2007 2014{
 
 	merge 1:1 pidlink hhid`year' pid`year' using "$maindir$tmp/bk_ar1_`year'.dta", keepusing(*`year') keep(1 3) nogen
+	erase "$maindir$tmp/bk_ar1_`year'.dta"
 
 }
 
-foreach year in 1993 1997 2000 2007 {
-		erase "$maindir$tmp/bk_ar1_`year'.dta"
-		}
 ********************************************************************************
 
 // Merge the information from the HTRACK files contained in the mover variable and the comm variable
@@ -368,13 +388,30 @@ sort hhid2007
 
 save "$maindir$tmp/htrack2007.dta", replace
 
+//2014 htrack
+
+use "$maindir$wave_5/htrack.dta", clear
+
+keep hhid14 commid14 mover14
+
+rename (hhid14 commid14 mover14) (hhid2014 commid2014 mover2014)
+
+destring hhid2014, gen(hhid2014_2) force
+
+drop if hhid2014_2==.
+drop hhid2014_2
+
+sort hhid2014
+
+save "$maindir$tmp/htrack2014.dta", replace
+
 restore
 
 // Merge the data
 
 *use "$maindir$project/MasterTrack1.dta"
 
-foreach year in 1993 1997 2000 2007{
+foreach year in 1993 1997 2000 2007 2014{
     
     sort hhid`year'
 	
@@ -420,7 +457,7 @@ restore
 	replace birthyr=BirthYr1 if birthyr==.
 	drop BirthYr1
 	
-	replace birthyr=bth_year if birthyr==. // replace with the last observed one in 2007 ptrack
+	replace birthyr=bth_year if birthyr==. // replace with the last observed one in 2014 ptrack
 	drop bth_year
 
 	* Correct Age
@@ -508,6 +545,10 @@ label values ar12 ParentStat
 label values ar13 Marriage
 label values ar18c InSch
 
+********************************************************************************
+* Recode all provinces to 1993 codes
+
+recode provmov (94=91) (82=81) (36=32) (20 21=14) (75=71) (19=16) (76=73) (65=64)
 
 ********************************************************************************
 // destring pidlink

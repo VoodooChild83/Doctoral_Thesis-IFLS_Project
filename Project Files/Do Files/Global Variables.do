@@ -9,6 +9,7 @@ global wave_2 "/Original Data/Wave 2/hh97dta"
 global wave_3 "/Original Data/Wave 3/hh00_all_dta"
 global wave_4 "/Original Data/Wave 4/hh07_all_dta"
 global wave_East "/Original Data/IFLSEast/iflse12_all data/hh data"
+global wave_5 "/Original Data/Wave 5/hh14_all_dta"
 
 global mapinfo "/Original Data/IDN_adm-2"
 
@@ -16,6 +17,7 @@ global mapinfo "/Original Data/IDN_adm-2"
 global project "/Project Files"
 global Do "/Do Files"
 global tmp "/Project Files/Temp Files"
-global maps "/Project Files/Maps"
+global maps "/Maps"
 global ipums "/IPUMS"
+global ONET "/Occupation Codes/"
 

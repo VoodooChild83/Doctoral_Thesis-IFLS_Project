@@ -1,15 +1,5 @@
 // 2007 Work Experience of those who are currently working
 
-cd "/Users/idiosyncrasy58/" 
-
-clear
-
-********************************************************************************
-//Set global directory information for files
-
-*quietly do "/Users/idiosyncrasy58/OneDrive/Documents/IFLS/Project Files/Do Files/Global Variables.do"
-quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma de Barcelona/IDEA - Economics/Doctoral Thesis Ideas/Migration/IFLS/Project Files/Do Files/Global Variables.do"
-
 ********************************************************************************
 // 2007 work experience: current and secondary job
 
@@ -39,6 +29,8 @@ preserve
 // Rename and keep the variables associated with the primary occupation
 
 rename (occ07tk2 tk22a tk23a tk23a2y) (occ2 hrs_wk wks_yr tot_yrs)
+
+gen unpaid=1 if tk24a==6
 
 replace hrs_wk=. if hrs_wk>168
 replace wks_yr=. if wks_yr>52
@@ -138,9 +130,9 @@ sort pidlink year
 	
 * Generate if worked
 
-	gen worked=1 if r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="")
+	gen worked=1 if ( r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="") | unpaid==1)
 	
-keep pidlink year year_start occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked
+keep pidlink year year_start occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked unpaid
 	
 save "$maindir$tmp/2007 Wage Current Occup 1.dta",replace
 
@@ -154,6 +146,8 @@ restore
 // Rename and keep the variables associated with the primary occupation
 
 rename (occ07tk3 tk22b tk23b tk23b2y) (occ2 hrs_wk wks_yr tot_yrs)
+
+gen unpaid=1 if tk24b==6
 
 replace hrs_wk=. if hrs_wk>168
 replace wks_yr=. if wks_yr>52
@@ -253,11 +247,11 @@ sort pidlink year
 	
 * Generate if worked
 
-	gen worked=1 if r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="")
+	gen worked=1 if ( r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="") | unpaid==1)
 	
 	keep if worked==1
 	
-keep pidlink year occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked year_start
+keep pidlink year occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked year_start unpaid
 	
 save "$maindir$tmp/2007 Wage Current Occup 2.dta",replace
 

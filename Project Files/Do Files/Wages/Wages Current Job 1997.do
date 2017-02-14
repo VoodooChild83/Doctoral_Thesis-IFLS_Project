@@ -18,6 +18,8 @@ preserve
 
 rename (tk20aocc tk22a tk23a) (occ2 hrs_wk wks_yr)
 
+gen unpaid=1 if tk24a==6
+
 replace hrs_wk=. if hrs_wk>168
 replace wks_yr=. if wks_yr>52
 
@@ -101,9 +103,9 @@ sort pidlink year
 	
 * Generate if worked
 
-	gen worked=1 if r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="")
+	gen worked=1 if ( r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="") | unpaid==1)
 	
-keep pidlink year occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked
+keep pidlink year occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked unpaid
 	
 save "$maindir$tmp/1997 Wage Current Occup 1.dta",replace
 
@@ -117,6 +119,8 @@ restore
 // Rename and keep the variables associated with the primary occupation
 
 rename (tk20bocc tk22b tk23b) (occ2 hrs_wk wks_yr)
+
+gen unpaid=1 if tk24b==6
 
 replace hrs_wk=. if hrs_wk>168
 replace wks_yr=. if wks_yr>52
@@ -201,11 +205,11 @@ sort pidlink year
 	
 * Generate if worked
 
-	gen worked=1 if r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="")
+	gen worked=1 if (r_wage_yr!=. | (hrs_wk!=. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth!=. & occ2!="") | (hrs_wk==. & wks_yr!=. & r_wage_mth==. & occ2!="") | (hrs_wk!=. & wks_yr==. & r_wage_mth==. & occ2!="") | (hrs_wk==. & wks_yr==. & r_wage_mth!=. & occ2!="") | unpaid==1)
 	
 	keep if worked==1
 	
-keep pidlink year occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked
+keep pidlink year occ2 hrs_* wks_yr mth_yr r_wage_* ln_* job worked unpaid
 	
 save "$maindir$tmp/1997 Wage Current Occup 2.dta",replace
 
@@ -231,8 +235,3 @@ forvalues x=1/2{
 
 	erase "$maindir$tmp/1997 Wage Current Occup `x'.dta"
 	}
-
-	
-	
-	
-	

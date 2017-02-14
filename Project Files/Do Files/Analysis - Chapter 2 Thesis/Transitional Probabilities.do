@@ -29,11 +29,11 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 			replace Market= 3 if (provmov>=51 & provmov<=53)
 			replace Market= 4 if (provmov>=61 & provmov<=65)|provmov==21
 			replace Market= 5 if (provmov>=71 & provmov<=76)
-			replace Market= 5 if (provmov>=81 & provmov<=94)
+			replace Market= 6 if (provmov>=81 & provmov<=94)
 			
 	* Create the two types of markets (sumatra and everywhere else)
 	
-		recode Market (1 = 1) (2/5=2), gen(Market2)
+		recode Market (1/2 = 1) (3/6=2), gen(Market2)
 		
 	* Create the Market2 migration variable
 	
@@ -264,5 +264,56 @@ keep pidlink2 pidlink_father pidlink_mother Dynasty Generation Family MarketMig_
 save "$maindir$tmp/Transition Functions.dta", replace
 
 erase "$maindir$tmp/Trans Func - Education.dta"
-erase "$maindir$tmp/Trans Func - Migration.dta"			
+erase "$maindir$tmp/Trans Func - Migration.dta"		
+
+********************************************************************************
+* Incorporate Wage Information
+
+* Merge in Child Wage info
+merge 1:1 pidlink2 using "$maindir$tmp/First Wages of Children.dta", keepusing(birthyr Skill_Level ln_wage_hr unpaid *OK *Mover *Mig provmov) keep(1 3)	nogen
 		
+sort Dynasty Generation Family birthyr
+
+*Keep only whole households
+drop if pidlink_father==. | pidlink_mother==.
+
+*Keep only first observed child
+collapse (firstnm) pidlink2-Family school3-Skill_Level, by(pidlink_father pidlink_mother)
+
+preserve
+
+	use "$maindir$tmp/First Wages of Adults.dta", clear
+	
+	gen double pidlink_father=pidlink2
+	gen double pidlink_mother=pidlink2
+	
+	gen Skill_Level_father = Skill_Level
+	gen Skill_Level_mother = Skill_Level
+	 
+	gen ln_wage_hr_father= ln_wage_hr
+	gen ln_wage_hr_mother=ln_wage_hr
+	
+	gen unpaid_mother=unpaid
+	gen unpaid_father=unpaid
+	
+	gen provmov_father=provmov
+	gen provmov_mother=provmov
+	
+	save "$maindir$tmp/First Wages of Adults.dta", replace
+
+restore
+
+merge m:1 pidlink_father using "$maindir$tmp/First Wages of Adults.dta", keepusing(Skill_Level_father ln_wage_hr_father unpaid_father provmov_father) keep(1 3) nogen
+merge m:1 pidlink_mother using "$maindir$tmp/First Wages of Adults.dta", keepusing(Skill_Level_mother ln_wage_hr_mother unpaid_mother provmov_mother) keep(1 3) nogen
+
+foreach pers in father mother {
+	gen Market_`pers'=1 if (provmov_`pers'>=11 & provmov_`pers'<=19)
+	replace Market_`pers'=2 if (provmov_`pers'>=31 & provmov_`pers'<=36)
+	replace Market_`pers'=3 if (provmov_`pers'>=51 & provmov_`pers'<=53)
+	replace Market_`pers'=4 if (provmov_`pers'>=61 & provmov_`pers'<=64)
+	replace Market_`pers'=5 if (provmov_`pers'>=72 & provmov_`pers'<=76)
+	replace Market_`pers'=6 if (provmov_`pers'>=81 & provmov_`pers'<=94)
+}
+
+
+

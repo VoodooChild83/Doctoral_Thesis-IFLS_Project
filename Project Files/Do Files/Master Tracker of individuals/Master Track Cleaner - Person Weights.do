@@ -5,7 +5,7 @@ keep pw* pidlink
 
 preserve
 
-keep pwt07la pw9307lr pwt00la pwt00lb pwt97inl pwt97l pwt93 pwt93in pidlink
+keep pwt_5_waves_l pwt14la pwt07la pwt939700_07lr pwt00la pwt00lb pwt97inl pwt97l pwt93 pwt93in pidlink
 
 * Keep only those who have a longitudinal weight
 egen Have_Weight = rsum(pw*), missing
@@ -23,7 +23,9 @@ rename (pwt97l pwt97inl) (pwt1997a pwt1997b)
 
 rename (pwt00la pwt00lb) (pwt2000a pwt2000b)
 
-rename (pwt07la pw9307lr) (pwt2007a pwt2007b)
+rename (pwt07la pwt939700_07lr) (pwt2007a pwt2007b)
+
+rename (pwt14la pwt_5_waves_l) (pwt2014a pwt2014b)
 
 reshape long pwt@a pwt@b, i(pidlink) j(wave)
 
@@ -48,7 +50,7 @@ drop Flag_LastWave
 
 reshape wide
 
-foreach year in 1993 1997 2000 2007{
+foreach year in 1993 1997 2000 2007 2014{
 
 	egen pwt`year'=rsum(pwt`year'*), missing
 
@@ -62,21 +64,23 @@ restore
 
 * Merge in those who have their weights already assigned from the longitudinal types
 
+bys pidlink: drop if _n>1
+
 merge 1:1 pidlink using "$maindir$tmp/Person Longitudinal Weights.dta"
 
 keep if _merge==1
-drop _merge pwt1993 pwt1997 pwt2000 pwt2007
+drop _merge pwt1993 pwt1997 pwt2000 pwt2007 pwt2014
 
-keep pwt00xa pwt97x pwt07xa pidlink
+keep pwt00xa pwt97x pwt07xa pwt14xa pidlink
 
-rename (pwt97x pwt00xa pwt07xa) (pwt1997 pwt2000 pwt2007)
+rename (pwt97x pwt00xa pwt07xa pwt14xa) (pwt1997 pwt2000 pwt2007 pwt2014)
 
 reshape long pwt@, i(pidlink) j(wave)
 
 * Find the last wave the participant was in
 
-bysort pidlink (wave): gen Count=_n if pwt!=.
-bysort pidlink (wave): egen Max_Count=max(Count) if Count!=.
+bys pidlink (wave): gen Count=_n if pwt!=.
+bys pidlink (wave): egen Max_Count=max(Count) if Count!=.
 gen Flag_LastWave=1 if Count==Max_Count & Count!=.
 
 drop *Count

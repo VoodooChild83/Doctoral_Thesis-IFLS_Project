@@ -8,7 +8,7 @@ qui do "$maindir$project$Do/Wages/Consolidate Wages - Append.do"
 ********************************************************************************
 // Drop observations that have no years - would not be able to identify 
 
-replace year=. if year>2008
+replace year=. if year>2015
 
 drop if year==.
 
@@ -81,7 +81,7 @@ replace job=1 if job==.
 drop if occ2=="SS"
 
 * Recode occupations to place those occupations with small observed individuals into the occupation of closest neighbor with larger obs
-
+/*
 replace occ2="0X" if occ2=="00"
 replace occ2="08" if occ2=="0X"|occ2=="09"
 replace occ2="21" if occ2=="24"
@@ -105,7 +105,7 @@ replace occ2="01" if occ2=="02"
 replace occ2="00" if occ2=="MM"|occ2=="M1"|occ2=="M2"
 replace occ2="39" if occ2=="3X"
 
-
+*/
 ********************************************************************************
 // Save
 

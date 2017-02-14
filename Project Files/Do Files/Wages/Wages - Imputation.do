@@ -62,7 +62,7 @@ save  "$maindir$tmp/Wage Database1.dta", replace
 			replace Market= 3 if (provmov>=51 & provmov<=53)
 			replace Market= 4 if (provmov>=61 & provmov<=65)|provmov==21
 			replace Market= 5 if (provmov>=71 & provmov<=76)
-			replace Market= 5 if (provmov>=81 & provmov<=94)
+			replace Market= 6 if (provmov>=81 & provmov<=94)
 			
 	* generate a market migration event
 	
@@ -96,6 +96,8 @@ save  "$maindir$tmp/Wage Database1.dta", replace
 * replace military code with 200
 	
 		replace occ2="200" if occ2=="00"
+		
+* replace farmers as 600
 		replace occ2="600" if occ2=="62"
 		
 * realize occupation string
@@ -168,4 +170,6 @@ save  "$maindir$tmp/Wage Database1.dta", replace
 		tab Market2 Schooling, sum(Med_Wage_Child2)
 		
 	compress pidlink-year_start kecmov-Med_Wage	
-		save "$maindir$tmp/Wage Database2.dta", replace
+	
+	replace occ2="00" if occ2=="200" 
+	replace occ2="62" if occ2=="600"

@@ -43,6 +43,8 @@ replace year=. if year>1993
 // Generate Work Status
 
 gen stopped_1987=1 if tk06==1
+
+gen unpaid=1 if tk15==6
 	
 gen dum_nvrwrkd=1 if tk05==3
 gen dum=1 if (tk01!=5 & year!=.)
@@ -157,9 +159,9 @@ drop PPP wage_mth
 ********************************************************************************
 // Keep the desired variables
 
-keep  pidlink occ2 year hrs_wk wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_yr ln_wage_hr stopped_wrk retired neverwrkd stopped_1987
+keep  pidlink occ2 year hrs_wk wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_yr ln_wage_hr stopped_wrk retired neverwrkd stopped_1987 unpaid
 	
-order pidlink year occ2 stopped_1987 stopped_wrk retired neverwrkd hrs_wk wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_hr ln_wage_yr
+order pidlink year occ2 stopped_1987 stopped_wrk unpaid retired neverwrkd hrs_wk wks_yr mth_yr r_wage_hr r_wage_mth r_wage_yr ln_wage_hr ln_wage_yr
 	
 gen dataset="3"
 
