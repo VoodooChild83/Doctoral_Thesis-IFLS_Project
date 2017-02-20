@@ -21,7 +21,9 @@ cdef struct Parameters:
 ################ Support Functions for Monte-Carlo Function ##################
 
 #Create a function that allocates the memory and verifies integrity
-cdef int alloc_struct(Parameters* data, int* N, unsigned int flag, int Mem_Int) nogil:
+cdef int alloc_struct(Parameters* data, int* N, unsigned int flag) nogil:
+
+    cdef int Mem_Int = True
     
     #fill in the size of the array
     data.Size = N
@@ -41,10 +43,8 @@ cdef int alloc_struct(Parameters* data, int* N, unsigned int flag, int Mem_Int) 
         
         #update the memory integrity variable to False
         Mem_Int = False
-        
-        return Mem_Int
     
-    else: return Mem_Int
+    return Mem_Int
 
 #Create the destructor of the struct to return memory to system
 cdef void destroy_struct(Parameters* data) nogil:
@@ -96,7 +96,7 @@ cpdef void Monte_Carlo(int[::1] Samples, double[:,::1] lam_hat, double lam_true,
         int status, GSL_CONTINUE, max_Iter = 10000, Iter
         
         #Variables
-        int N = Samples.shape[0], Mem_Int = True
+        int N = Samples.shape[0], Mem_Int
         double a, b, tol = 1e-6, start_val
         
         #define the GSL RNG variables
@@ -132,7 +132,7 @@ cpdef void Monte_Carlo(int[::1] Samples, double[:,::1] lam_hat, double lam_true,
         for i in range(N): 
 
             #allocate the elements of the struct (if i>0, reallocate)
-            Mem_Int = alloc_struct(Data, &Samples[i], i, Mem_Int)
+            Mem_Int = alloc_struct(Data, &Samples[i], i)
 
             #verify memory integrity of the allocated Struct
             if Mem_Int==False: abort() 
