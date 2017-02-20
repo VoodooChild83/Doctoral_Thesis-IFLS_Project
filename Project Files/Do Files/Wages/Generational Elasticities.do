@@ -8,7 +8,7 @@ bys pidlink (year job): keep if ( FirstJob==1 | (_n==1 & r_wage_hr!=.) ) /// & j
 
 * Collapse the data to keep only one observation per person
 
-collapse (mean) r_wage_hr age year hrs_wk wks_yr (max) Skill_Level IntraIsland_ParentMig InterIsland_ParentMig Prov_ParentMig UrbBirth Urb12 (firstnm) MaxSchYrs Sex Religion Ethnicity birthyr occ2, by (pidlink)
+collapse (mean) r_wage_hr age year hrs_wk wks_yr (max) Skill_Level IntraIsland_ParentMig InterIsland_ParentMig Prov_ParentMig UrbBirth Urb12 (firstnm) MaxSchYrs SchLvl Sex Religion Ethnicity birthyr occ2, by (pidlink)
 
 replace year=int(year)
 

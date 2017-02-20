@@ -22,11 +22,11 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 	
 * Create the Panel Dataset (Does not account for grade repeats)
 
-	qui do "$maindir$tmp/Education/Childrens Education - Longitudinal Dataset.do"
+	qui do "$maindir$project$Do/Education/Childrens Education - Longitudinal Dataset.do"
 	
 * Conduct the Survival Anlaysis
 
-	qui do "$maindir$tmp/Education/Childrens Education - Survival Analysis.do"	
+	qui do "$maindir$project$Do/Education/Childrens Education - Survival Analysis.do"	
 	
 * Conduct the descriptive analysis
 

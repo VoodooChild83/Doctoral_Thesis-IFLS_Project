@@ -78,7 +78,7 @@ merge m:1 pidlink using "$maindir$tmp/PersonWeights.dta", keep(1 3) keepusing(pw
 
 ********************************************************************************
 * Regressions
-
+/*
 
 qui probit GradDropOut Prov_Mover  year1-year9 year10_11 year1_3_Prov_Mover year4_Prov_Mover-year6_Prov_Mover year7_8_Prov_Mover year9_Prov_Mover year10_11_Prov_Mover if birthyr>1970 [pw=pwt], vce(cluster Dynasty) nolog nocons
 outreg2 using "$maindir$project/Regressions/TEX Files/Survival/Survival Analysis.tex", addtext(Baseline Hazard, YES) drop(year1-year9 year10_11 year1_3_Prov_Mover year4_Prov_Mover-year6_Prov_Mover year7_8_Prov_Mover year9_Prov_Mover year10_11_Prov_Mover) replace label dec(3) noas nodepvar
@@ -113,7 +113,36 @@ outreg2 using "$maindir$project/Regressions/TEX Files/Survival/Survival Analysis
 qui probit GradDropOut Prov_Mover  year1-year9 year10_11 year1_3_Prov_Mover year4_Prov_Mover-year6_Prov_Mover year7_8_Prov_Mover year9_Prov_Mover year10_11_Prov_Mover Urbanization UrbBirth sex Religion ParentalSchAvg SpeakInd ReadInd WriteInd Worked Admin Late_Starter d_GrRep if birthyr>1970 [pw=pwt], vce(cluster Dynasty) nolog nocons
 outreg2 using "$maindir$project/Regressions/TEX Files/Survival/Survival Analysis - Ast.tex", addtext(Baseline Hazard, YES, Individual Control, YES,Parental Control, YES, Schooling Controls, YES) drop(year1-year9 year10_11 year1_3_Prov_Mover year4_Prov_Mover-year6_Prov_Mover year7_8_Prov_Mover year9_Prov_Mover year10_11_Prov_Mover) label dec(3) nodepvar
 
+*/
+
+* Cox Models
 
 
-drop year1-year10_11_Prov_Mover
+stset Grade [pw=pwt], failure (GradDropOut)
+
+qui stcox Prov_Mover Urbanization UrbBirth sex Religion if birthyr>1970,  vce(cluster Dynasty) nolog
+outreg2 using "$maindir$project/Regressions/TEX Files/Survival/Survival Analysis - Cox.tex", addtext(Cohort Controls, YES) replace label dec(3) nodepvar
+
+qui stcox ParentalSchAvg if birthyr>1970,  vce(cluster Dynasty) st(mov_stat) nolog 
+outreg2 using "$maindir$project/Regressions/TEX Files/Survival/Survival Analysis - Cox.tex", addtext(Cohort Controls, YES) label dec(3) nodepvar
+
+qui stcox SpeakInd ReadInd WriteInd Worked Admin Late_Starter if birthyr>1970,  vce(cluster Dynasty) st(mov_stat) nolog
+outreg2 using "$maindir$project/Regressions/TEX Files/Survival/Survival Analysis - Cox.tex", addtext(Cohort Controls, YES)  label dec(3) nodepvar
+
+qui stcox  Urbanization UrbBirth sex Religion ParentalSchAvg SpeakInd ReadInd WriteInd Worked Admin Late_Starter d_GrRep if birthyr>1970,  vce(cluster Dynasty) nolog
+outreg2 using "$maindir$project/Regressions/TEX Files/Survival/Survival Analysis - Cox.tex", addtext(Cohort Controls, YES) label dec(3) nodepvar
+
+stcox Prov_Mover Urbanization UrbBirth sex Religion SpeakInd ReadInd WriteInd Worked Admin Late_Starter if birthyr>1970, vce(cluster ProvCode) nolog basesurv(S0)
+
+label var S0 "Parent's Don't Migrate"
+gen S1=S0^exp(_b[Prov_Mover]) 
+label var S1 "Parent's Migrate"
+sort _t
+twoway (line S0 _t) (line S1 _t), ytitle(Survival) xtitle(Grade) title(Survival of Students in the School System)  xlabel(1 (1) 12)
+          
+graph export "$maindir$project/Descriptive Stats/Cox Survival.jpg", replace
+
+stset,clear
+
+drop year1-year10_11_Prov_Mover D_* S0 S1
 
