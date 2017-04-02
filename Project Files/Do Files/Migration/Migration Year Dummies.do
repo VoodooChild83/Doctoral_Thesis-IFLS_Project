@@ -24,7 +24,7 @@ erase  "$maindir$tmp/MigrationEvents Update.dta"
 
 sort pidlink stage
 
-keep pidlink stage MigYear wave movenum* *_Inter* *_Intra* *Family* Urb* *UrbRurmig Islandmov provmov
+keep pidlink stage MigYear wave movenum* *_Inter* *_Intra* *Family* Urb* *UrbRurmig Islandmov provmov mg36
 drop Cohort_* Tally_* 
 
 * Recode all the misisng values in the flag variables

@@ -26,8 +26,12 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 		save "$maindir$tmp/Dynasty Build.dta", replace
 
 ********************************************************************************
+// Education Data Set
+
+	qui do "$maindir$project$Do/Education/Childrens Education - Longitudinal Dataset for Master Data.do"
+	
+********************************************************************************
 // MIGRATION DATA SET 
 
-	* 1) Use the migration subfile to obtain the longitudinal panel of migrations
+	qui do "$maindir$project$Do/Longitudinal Panel DataSet/Migration Longitudinal Builder.do"
 	
-		qui do 

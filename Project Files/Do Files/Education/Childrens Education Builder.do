@@ -24,6 +24,11 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 
 	qui do "$maindir$project$Do/Education/Childrens Education - Longitudinal Dataset.do"
 	
+			
+	* Save file
+
+	save "$maindir$tmp/Childrens Education - Longitudinal Data.dta", replace
+	
 * Conduct the Survival Anlaysis
 
 	qui do "$maindir$project$Do/Education/Childrens Education - Survival Analysis.do"	
@@ -31,8 +36,5 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 * Conduct the descriptive analysis
 
 	
-		
-* Save file
 
-save "$maindir$tmp/Childrens Education - Longitudinal Data.dta", replace
 		

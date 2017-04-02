@@ -1,5 +1,7 @@
 /* Global Variables Initialize */
 
+cd "/Users/idiosyncrasy58/"
+
 global maindir "Dropbox/Documents/College/Universitat Autonoma de Barcelona/IDEA - Economics/Doctoral Thesis Ideas/Migration/IFLS"
 *global maindir "OneDrive/Documents/IFLS"
 
