@@ -35,3 +35,15 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 
 	qui do "$maindir$project$Do/Longitudinal Panel DataSet/Migration Longitudinal Builder.do"
 	
+********************************************************************************
+// Data set for estimation - longitudinal
+
+	qui do "$maindir$project$Do/Longitudinal Panel DataSet/Longitudinal Data for estimation.do"
+
+********************************************************************************
+// Estimation of Model 1: Data set collapse into two time periods - a child and an adult-child data
+
+	qui do "$maindir$project$Do/Longitudinal Panel Dataset/Final Data Collapse.do"
+
+
+	
