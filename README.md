@@ -9,10 +9,6 @@ The source of my data is the [RAND corporation's Indonesian Family Life Survey](
 
 ## Files and Folders of Interest
 
-### Presentations and Draft Thesis Chapters
-
-Work pertaining to the development of thesis chapters and presentations given in the evaluation phases. These are drafts and should not be reproduced. In particular, and as is usually the case, the introduction of the chapters are to be revisited and revised, particularly those of the first chapter contained in the folder 'Year 3 Evaluation/Year 3 Paper' (corresponding to the first year of the PhD phase). Furthermore, several aspects of the appendix located in Chapter 2's draft (located in the Year 4 folder, corresponding the second year of the PhD phase) need to be folded into Chapter 1's descriptive sections (such as the wage analysis section). 
-
 ## Project Files
 
 This folder contains the bulwark of the analysis regarding the data. Within this section one will find the STATA DO files associated with the cleaning and analysis of the dataset, including the code to reconstruct the longitudinal aspects of the IFLS survey. 
