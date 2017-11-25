@@ -99,7 +99,7 @@ for polity in polities:
         js=json.loads(str(data))
         
         
-        #if the JSON data does not contain andy geocodes it is because the polity was found in the geonames file
+        #if the JSON data does not contain any geocodes it is because the polity was found in the geonames file
         #grab the lat,lon from this file; otherwise grab the data from the JSON file, if a mismatch, recall the
         #geonames file
         

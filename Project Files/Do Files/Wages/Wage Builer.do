@@ -18,11 +18,11 @@ quietly do "/Users/idiosyncrasy58/Dropbox/Documents/College/Universitat Autonoma
 
 	save "$maindir$tmp/Wage Database1.dta", replace
 
-* Impute data
+* Impute wage data
 
-	*qui do "$maindir$project$Do/Wages/Wages - Imputation.do"
+	qui do "$maindir$project$Do/Wages/Wages - Imputation.do"
 	
-	* save "$maindir$tmp/Wage Database2.dta", replace
+	save "$maindir$tmp/Wage Database2.dta", replace
 
 * Run the Mincer regressions file
 

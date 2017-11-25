@@ -3,7 +3,9 @@
 ********************************************************************************
 * Do (or use) the file that gets us the wage database
 
-qui do "$maindir$project$Do/Wages/Consolidate Wages - Longitudinal Data.do"
+use "$maindir$tmp/Wage Database1.dta", clear
+
+/*
 
 ********************************************************************************
 * Append the IPUMS dataset
@@ -49,10 +51,10 @@ erase "$maindir$tmp/IPUMS.dta"
 	drop if job==2
 	
 save  "$maindir$tmp/Wage Database1.dta", replace
-	
-********************************************************************************
+	*/
+******************************************************************************** <--- NOTE: The new dataset has migration events: Remove this section of code and update the imputation scheme
 * Generate the markets for imputation
-
+/*
 	* the Island of Sumatra and Jawa are one market; the other provinces across other 
 	* islands are all another market
 	
@@ -79,15 +81,42 @@ save  "$maindir$tmp/Wage Database1.dta", replace
 		gen IntraMarketMover=IntraMarketMig
 			bys pidlink2: replace IntraMarketMover=1 if pidlink[_n]==pidlink[_n-1] & IntraMarketMover[_n-1]==1
 			
-		* Update the
-		
+*/	
+
+********************************************************************************
+* Collapse occupation codes according to the nearest ones
+
+	replace occ2="0X" if occ2=="00"
+	replace occ2="08" if occ2=="0X"|occ2=="09"
+	replace occ2="21" if occ2=="24"
+	replace occ2="26" if occ2=="27"
+	replace occ2="45" if occ2=="48"|occ2=="49"|occ2=="4X"
+	replace occ2="89" if occ2=="8X"
+	replace occ2="95" if occ2=="96"
+	replace occ2="99" if occ2=="9X"|occ2=="999"
+	replace occ2="100" if occ2=="X2"|occ2=="XX"|occ2=="X3"
+	replace occ2="79" if occ2=="7X"
+	replace occ2="75" if occ2=="76"
+	replace occ2="64" if occ2=="69"
+	replace occ2="51" if occ2=="52"|occ2=="50"
+	replace occ2="29" if occ2=="2X"
+	replace occ2="05" if occ2=="04"
+	replace occ2="35" if occ2=="34"
+	replace occ2="28" if occ2=="29"
+	replace occ2="86" if occ2=="87"
+	replace occ2="90" if occ2=="91"
+	replace occ2="01" if occ2=="02"
+	replace occ2="00" if occ2=="MM"|occ2=="M1"|occ2=="M2"
+	replace occ2="39" if occ2=="3X"
+
+
 ********************************************************************************
 * Generate the variables for imputation (collapse the occupation codes for 
 * low observation counts in the distinct markets)
 			
 * gen log hours work
 	
-	gen ln_hrs_wk=ln(hrs_wk)
+	*gen ln_hrs_wk=ln(hrs_wk)
 	
 * generate the fixed effects for years
 	
@@ -117,6 +146,10 @@ save  "$maindir$tmp/Wage Database1.dta", replace
 
 	gen flag_0wage=1 if r_wage_hr==0
 	
+* recode Island 7 into island 6
+
+	replace Islandmov=5 if Islandmov==7|Islandmov==6
+	
 ********************************************************************************
 * Impute the wages using (PMM) 
 
@@ -126,11 +159,11 @@ save  "$maindir$tmp/Wage Database1.dta", replace
 	
 	mi register imputed ln_wage_hr 
 	
-	mi register regular pidlink-occ2 hrs_wk wks_yr hrs_mth hrs_yr mth_yr r_wage_hr r_wage_mth-IntraMarketMover ln_hrs_wk Occupation AggOcc
+	mi register regular pidlink-occ2 hrs_wk wks_yr hrs_mth hrs_yr mth_yr r_wage_hr r_wage_mth-IntraIsland_FamilyMig Occupation AggOcc
 
 * Impute missing values using the mincer regression equation
 
-	mi impute pmm ln_wage_hr=MaxSchYrs age age_2 Sex Urban Religion InterMarketMig IntraMarketMig if year>=1961 & flag_0wage!=1, add(1) by(AggOcc Market) force knn(3)
+	mi impute pmm ln_wage_hr=MaxSchYrs age age_2 Sex Urban Religion InterIslandMig IntraIslandMig if year>=1961 & flag_0wage!=1 & job==1, add(1) by(AggOcc Islandmov) force knn(3)
 	
 * Extract the file
 
@@ -143,11 +176,21 @@ save  "$maindir$tmp/Wage Database1.dta", replace
 	 drop if version=="IPUMS"
 		drop serial-Literacy
 	*/
+
+********************************************************************************
+* Create a flag_Imp
+
+gen byte flag_Imp = (ln_wage_hr!=. & r_wage_hr==. & job==1)
 ********************************************************************************
 * Update the impute real wages based on the imputed values of log wages
 
-	replace r_wage_hr=exp(ln_wage_hr) if r_wage_hr==. & ln_wage_hr!=. & flag_0wage!=1
-	
+	replace r_wage_hr=exp(ln_wage_hr) if flag_Imp==1 & flag_0wage!=1
+
+* replace imputed values if the person was unpaid to missing
+
+	replace r_wage_hr=. if unpaid==1
+	replace ln_wage_hr=. if unpaid==1
+/*	
 * Generate the markets for solving the dynamic program (keep Sumatra as the main island group)
 
 	recode Market (1 = 1) (2/5=0), gen(Market2)
